@@ -9,3 +9,5 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 12:41 | Wrote 8 phase plans in `docs/phases/`, synced 2 small details into DESIGN.md. |
 | 30 Oct | 12:52 | Cut phase plans down to short 15-line plans; details go in code. |
 | 30 Oct | 12:53 | Final docs review: fixed `.gitignore` hiding `tests/fixtures/`, synced SPEC wording with DESIGN. |
+| 30 Oct | 12:57 | Phase 01 done: setup, config, DB schema, errors, auth, `/health`. 9 tests pass. |
+| 30 Oct | 13:03 | Phase 01 review: fixed non-ASCII token 500, plain-text 500s, equal tokens; Swagger auth. 12 tests pass. |

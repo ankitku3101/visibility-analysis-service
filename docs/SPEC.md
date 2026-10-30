@@ -13,7 +13,7 @@ A Python backend (FastAPI + SQLite) that:
 2. Analyses every response. Each one ends as `succeeded`, `failed` (with error code) or `skipped` (with reason).
    A successful result has:
    - labels: `absent`, `mentioned`, `recommended`, `negative` (the last three can appear together)
-   - an exact quote from the answer for each label
+   - an exact quote from the answer for each true label
    - competitors named in the answer, Kasparro's list position (or `null`), and the answer's citations
 3. Calculates a visibility score with code. Shows each part of the score and its count (e.g. `4/10`), split by
    engine, prompt category, and branded vs unbranded prompts. Compares the same prompt across the 3 engines.
@@ -40,7 +40,7 @@ Done = every command in Validation passes on a fresh clone in under 10 minutes.
 - Keep all original IDs as they are (`prompt_id`, `response_id`, `citation_id`, `run_id`).
 - Missing values stay `null`. Never guess `model_version`, `publication_date` or `force_web_search`.
 - `answer_text` and `answer_markdown` are the same response. Analyse `answer_text` only.
-- Before classification, cut off the numbered URL list at the end of `answer_text` (`[n] https://...`
+- Before classification, cut off the `Citations:` URL list at the end of `answer_text` (`[n] https://...`
   lines), so a `kasparro.com` link is not read as a mention. Quotes must still be exact substrings of
   `answer_text`.
 - LLM is used only for classification (labels, quotes, competitors, position). Counting, scoring,
@@ -118,7 +118,7 @@ New project. Only the supplied pack exists.
 
 ## Tasks
 
-Each task has its own phase file in `docs/phases/` with step-by-step detail.
+Each task has a short plan in `docs/phases/`. Technical decisions live in DESIGN.md.
 
 ### T1: Setup and storage
 
@@ -131,6 +131,7 @@ Verify: `python -m app.db init` creates the DB. `GET /health` returns 200. `/doc
 What: `POST /datasets` reads and validates the pack files and stores them. Bad rows are listed in the
 response and skipped. Good rows are still saved. Missing or unreadable file → 422.
 Same `response_id` with same content → reuse. Same ID with different content → 409.
+Includes a small made-up test pack in `tests/fixtures/mini_pack/`.
 Verify: counts are 50/150/2439. Second import adds nothing. Bad row is listed with the reason.
 
 ### T3: LLM client
@@ -146,9 +147,9 @@ Bad JSON or empty → failed.
 
 What: `POST /analyses` starts classification in a background thread and returns 202 with the analysis ID.
 It accepts an optional `limit` for quick test runs. `GET /analyses/{id}` returns status
-(`running/completed`), counts (total/succeeded/failed/skipped) and per-response results.
+(`running/completed/failed/interrupted`), counts (total/succeeded/failed/skipped) and per-response results.
 Code checks each quote exists in `answer_text`, links citations, and sets prompt category and branded flag.
-Verify: replay run covers all 150 responses. One broken result fails on its own without affecting others.
+Verify: stub run covers all 150 responses. One broken result fails on its own without affecting others.
 
 ### T5: Scoring
 
@@ -159,8 +160,8 @@ Verify: hand-calculated example matches the code output exactly.
 
 ### T6: Report and review
 
-What: `POST /reports` builds a draft from a completed analysis (scores, 3 diagnostics, 3 remedies,
-evidence). Check every referenced response ID and quote exists. Endpoints: `GET /reports/{id}`,
+What: `POST /reports` builds a draft from a completed analysis (scores + 3 diagnostic drafts with evidence).
+The analyst adds explanations and 3 remedies. Check every referenced response ID and quote exists. Endpoints: `GET /reports/{id}`,
 `PATCH /reports/{id}`, `POST /reports/{id}/submit`, `POST /reports/{id}/decision`,
 `GET /reports/{id}/export`.
 Verify: analyst trying to approve → 403. Rejected → export 409. Edit after approval → new draft that
@@ -181,7 +182,6 @@ What: Run the full flow. Write:
 - `README.md`: setup, model download note (~4.7 GB), commands, curl examples, how to switch modes
 - `docs/DECISIONS.md`: one page covering scoring, backend and review choices, alternatives, top remedy,
   failure/fix, biggest risk, omissions, questions before release and AI assistance
-- `tests/fixtures/`: a small made-up fixture used by the tests
 
 Verify: fresh clone → follow README → full flow works in replay mode in under 10 minutes.
 

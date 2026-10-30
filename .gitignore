@@ -1,14 +1,15 @@
-# Supplied assignment pack (hiring team's data, keep out of Git)
-data/
-provenance/
-reference/
-schemas/
-fixtures/
-tools/
-Assignment.pdf
-Assignment.docx
-START_HERE.txt
-PACK_MANIFEST.json
+# Supplied assignment pack (hiring team's data, keep out of Git).
+# Leading "/" = only at the project root, so tests/fixtures/ is still tracked.
+/data/
+/provenance/
+/reference/
+/schemas/
+/fixtures/
+/tools/
+/Assignment.pdf
+/Assignment.docx
+/START_HERE.txt
+/PACK_MANIFEST.json
 
 # Secrets
 .env
@@ -16,6 +17,8 @@ PACK_MANIFEST.json
 # Database
 *.db
 *.db-journal
+*.db-wal
+*.db-shm
 
 # Python
 __pycache__/

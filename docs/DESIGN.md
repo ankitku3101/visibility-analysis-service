@@ -25,7 +25,7 @@ app/
   api/             health.py, datasets.py, analyses.py, reports.py (thin handlers)
 eval/              cases/labels_v1.json, baseline.py, grader.py, run_eval.py, results/
 tests/             conftest.py, fixtures/mini_pack/ (made-up data), test_*.py
-replay/classify-v1/<response_id>.json   saved raw LLM outputs
+replay/<prompt_version>/<id>.json       saved raw LLM outputs
 out/analysis.json                       approved report export + active time (final output)
 ```
 
@@ -58,7 +58,7 @@ JSON columns are stored as TEXT. `content_hash` = sha256 of the JSON with sorted
 | `GET /health` | none | 200 | — |
 | `POST /datasets` | analyst | 201 new / 200 reused | 409 same ID different content, 422 bad file |
 | `POST /analyses` `{dataset_id, limit?}` | analyst | 202 | 404 dataset, 409 run already running |
-| `GET /analyses/{id}` | any | 200 | 404 |
+| `GET /analyses/{id}` (adds `scores` when completed) | any | 200 | 404 |
 | `POST /reports` `{analysis_id}` | analyst | 201 | 409 analysis not completed |
 | `GET /reports/{id}` `?version=` | any | 200 | 404 |
 | `PATCH /reports/{id}` | analyst | 200 | 422 bad content or evidence |
@@ -81,7 +81,7 @@ Errors: services raise `AppError(status, code, message, details)`. One handler t
 
 ## 7. Analysis
 
-**Preprocess (code):** cut the trailing `[n] https://...` URL list from `answer_text`. Empty text or
+**Preprocess (code):** cut the trailing `Citations:` + `[n] https://...` block from `answer_text`. Empty text or
 `capture_status != captured` → `skipped` with reason. Set `is_branded` and `category` from the prompt.
 
 **Mention (code, not LLM):** `mentioned` = the word "kasparro" (case-insensitive) appears in the cleaned
@@ -109,9 +109,9 @@ If not mentioned, `recommended` and `negative` are forced false. Position = inde
 results saved one by one so `GET` shows progress. On startup, runs left `running` are marked `interrupted`.
 
 **LLM clients:** `OllamaClient` (httpx POST `/api/chat`, settings from SPEC, `num_predict: 1024`). Every
-local call's raw output or error is appended to `replay/classify-v1/<id>.json` (id = response_id or eval
-case_id). `ReplayClient` plays them back in the same order, so failures replay too; no file → `replay_missing`.
-`StubClient` follows a script per id (`ok`, `timeout`, `malformed`, `empty`). Every call goes to `llm_calls`.
+local call's raw output or error is saved to `replay/<prompt_version>/<id>.json` (id = response_id or eval
+case_id). `ReplayClient` returns the entry for the same attempt number, so failures replay too; no file →
+`replay_missing`. `StubClient` follows a script per id (`ok`, `timeout`, `malformed`, `empty`). All calls → `llm_calls`.
 
 ## 8. Categories (`cat-v1`)
 
@@ -133,7 +133,7 @@ Per successful response, points out of 100:
 | kasparro cited | 10 | at least one citation domain ends with `kasparro.com` |
 
 Group score = average over **succeeded** responses only. Each group also shows:
-- the rate of each part as `x/n`, plus total, succeeded, failed and skipped counts
+- the rate of each part as `x/n` (also recommended/negative among mentioned), plus total, succeeded, failed, skipped
 - a range: lowest (failed counted as 0) to highest (failed counted as 100), so failures stay visible
 - `low_coverage: true` when succeeded/total < 80%
 

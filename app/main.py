@@ -2,16 +2,23 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.api import datasets, health
+from app.analysis.runner import mark_interrupted
+from app.api import analyses, datasets, health
 from app.config import get_settings
-from app.db import init_db
+from app.db import connect, init_db
 from app.errors import register_error_handlers
 from app.llm.client import get_client
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    init_db(get_settings().db_path)
+    db_path = get_settings().db_path
+    init_db(db_path)
+    conn = connect(db_path)
+    try:
+        mark_interrupted(conn)
+    finally:
+        conn.close()
     yield
 
 
@@ -27,6 +34,7 @@ def create_app() -> FastAPI:
     app.state.client_factory = get_client
     app.include_router(health.router)
     app.include_router(datasets.router)
+    app.include_router(analyses.router)
     return app
 
 

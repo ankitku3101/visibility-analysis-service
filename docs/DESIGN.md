@@ -97,7 +97,8 @@ competitors: [str], ranked_list: [str]|null   (only if the answer has an explici
 ```
 
 **Validation (code):** JSON must parse and match the model. Output over 8,000 chars → invalid.
-Each `true` label needs a quote found in `answer_text` (exact match after collapsing whitespace in both).
+Each `true` label needs a quote found in `answer_text`. Both sides are normalised first: whitespace collapsed,
+case ignored, markdown `*`/`` ` `` removed, curly quotes and dashes made plain (146/150 answers use `**bold**`).
 If not mentioned, `recommended` and `negative` are forced false. Position = index of Kasparro in
 `ranked_list`, else `null`. Competitor names are trimmed and matched against a small alias map.
 

@@ -9,8 +9,7 @@ from app.db import now
 from app.errors import AppError
 from app.llm.client import Budget, EvidenceError, LLMClient, LogFn, call_with_retries
 from app.llm.prompts import PROMPT_VERSION, ClassifyOutput, build_messages
-
-SCORING_VERSION = "score-v1"  # recorded on the run; the scorer itself arrives in Phase 05
+from app.scoring.score import SCORING_VERSION
 
 # Same company, different spellings → one name. Keys are lowercase.
 ALIASES = {

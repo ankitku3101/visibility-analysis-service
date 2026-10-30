@@ -6,6 +6,7 @@ from app.analysis.service import create_run, get_run
 from app.auth import current_actor, require_role
 from app.config import get_settings
 from app.db import connect
+from app.scoring.aggregate import build_scores
 
 router = APIRouter(tags=["analyses"])
 
@@ -29,10 +30,13 @@ def create_analysis(body: AnalysisRequest, request: Request, actor: str = Depend
     return {"analysis_id": run_id, "status": "running", "llm_mode": client.mode}
 
 
-@router.get("/analyses/{analysis_id}", summary="Status, counts and per-response results")
+@router.get("/analyses/{analysis_id}", summary="Status, counts, per-response results and scores (when completed)")
 def read_analysis(analysis_id: int, include_results: bool = True, actor: str = Depends(current_actor)):
     conn = connect(get_settings().db_path)
     try:
-        return get_run(conn, analysis_id, include_results)
+        run = get_run(conn, analysis_id, include_results)
+        if run["status"] == "completed":
+            run["scores"] = build_scores(conn, analysis_id)
+        return run
     finally:
         conn.close()

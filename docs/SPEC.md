@@ -107,8 +107,8 @@ New project. Only the supplied pack exists.
   - Prompts 1–25 mention Kasparro by name. Prompts 26–50 do not.
   - `model_version` is null for all 50 AI Mode responses and 5 ChatGPT responses.
   - 149/150 `answer_text` values end with a numbered URL list that `answer_markdown` does not have.
-  - Citations: 1,518 `inline_hyperlink` + 921 `sources_panel`, 1,487 unique URLs, 180 point to
-    `kasparro.com`. One response has no citations.
+  - Citations: 1,518 inline + 921 sources panel. 180 URLs contain "kasparro" but only 21 are on kasparro.com
+    (14 responses); most others are job sites (bebee, getmereferred, iimjobs) and LinkedIn.
 - Ollama is installed with `qwen2.5:7b` at `http://localhost:11434`. Measured on the dev machine:
   about 7–10 s per call once the model is loaded, plus about 10 s to load it. A full 150-response run
   takes about 20–25 min.

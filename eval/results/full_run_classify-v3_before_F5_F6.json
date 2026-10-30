@@ -1,0 +1,105 @@
+{
+ "what": "First full local run of classify-v3 (before fixes F5/F6). Kept as the 'before' record; the official run was re-done after the fixes.",
+ "run": {
+  "id": 1,
+  "status": "completed",
+  "llm_mode": "local",
+  "model": "qwen2.5:7b",
+  "prompt_version": "classify-v3",
+  "started_at": "2026-10-30T10:22:52.866681+00:00",
+  "finished_at": "2026-10-30T10:46:30.416738+00:00",
+  "counts": {
+   "failed": 3,
+   "processed": 150,
+   "skipped": 0,
+   "succeeded": 147,
+   "total": 150
+  },
+  "llm_calls": 157,
+  "llm_seconds": 1415.116
+ },
+ "failed": [
+  {
+   "response_id": "35b7cd2b-eef2-4767-84a7-c9e6aff8fcf5",
+   "error_code": "evidence_not_found",
+   "engine": "aimode",
+   "text": "who is more trustworthy for ai brand tracking kasparro or athenahq?",
+   "recorded_attempts": [
+    {
+     "attempt": 1,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"There is no data available for a competitor named 'Kasparro', suggesting AthenaHQ is the more established or visible entity in this specialized market segment.\",\n  \"competitors\": [\"Dageno AI\", \"Analyze AI\"],\n  \"ranked_list\": null\n}",
+     "error_code": null
+    },
+    {
+     "attempt": 2,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"There is no data available for a competitor named 'Kasparro', suggesting AthenaHQ is the more established or visible entity in this specialized market segment.\",\n  \"competitors\": [\"Dageno AI\", \"Analyze AI\"],\n  \"ranked_list\": null\n}",
+     "error_code": null
+    },
+    {
+     "attempt": 3,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"There is no data available for a competitor named 'Kasparro', suggesting AthenaHQ is the more established or visible entity in this specialized market segment.\",\n  \"competitors\": [\"Dageno AI\", \"Analyze AI\"],\n  \"ranked_list\": null\n}",
+     "error_code": null
+    }
+   ]
+  },
+  {
+   "response_id": "861a9955-69ab-46ed-927c-fd336bc37893",
+   "error_code": "provider_error",
+   "engine": "gemini",
+   "text": "what do real enterprise users say about kasparro's ai revenue diagnostic?",
+   "recorded_attempts": [
+    {
+     "attempt": 1,
+     "kind": "error",
+     "raw": null,
+     "error_code": "provider_error"
+    },
+    {
+     "attempt": 2,
+     "kind": "error",
+     "raw": null,
+     "error_code": "provider_error"
+    },
+    {
+     "attempt": 3,
+     "kind": "error",
+     "raw": null,
+     "error_code": "provider_error"
+    }
+   ]
+  },
+  {
+   "response_id": "95f393e4-e371-4acf-8c6e-1a74bf65c045",
+   "error_code": "evidence_not_found",
+   "engine": "aimode",
+   "text": "is kasparro missing any major ai search engines like Gemini or Claude?",
+   "recorded_attempts": [
+    {
+     "attempt": 1,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro appears to be missing major AI models like Anthropic's Claude and Google's Gemini, which are currently recognized as top-tier competitors alongside ChatGPT.\",\n  \"competitors\": [\"Claude\", \"Gemini\"],\n  \"ranked_list\": [\"ChatGPT\", \"Claude\", \"Gemini\", \"Perplexity\"]\n}",
+     "error_code": null
+    },
+    {
+     "attempt": 2,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro appears to be missing major AI models like Anthropic's Claude and Google's Gemini, which are currently recognized as top-tier competitors alongside ChatGPT.\",\n  \"competitors\": [\"Claude\", \"Gemini\"],\n  \"ranked_list\": [\"ChatGPT\", \"Claude\", \"Gemini\", \"Perplexity\"]\n}",
+     "error_code": null
+    },
+    {
+     "attempt": 3,
+     "kind": "output",
+     "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro appears to be missing major AI models like Anthropic's Claude and Google's Gemini, which are currently recognized as top-tier competitors alongside ChatGPT.\",\n  \"competitors\": [\"Claude\", \"Gemini\"],\n  \"ranked_list\": [\"ChatGPT\", \"Claude\", \"Gemini\", \"Perplexity\"]\n}",
+     "error_code": null
+    }
+   ]
+  }
+ ],
+ "diagnosis": {
+  "evidence_not_found (2)": "Quotes matched word for word but punctuation differed from the source ('Gemini , which' vs 'Gemini, which'; \"'Kasparro,'\" vs \"'Kasparro',\"). Feedback retries returned the same quote. → F5",
+  "provider_error (1)": "Ollama HTTP 500 'prediction aborted, token repeat limit reached': the model looped; at temperature 0 every retry looped the same way. The error text was not stored, found by re-sending the request by hand. → F6"
+ }
+}

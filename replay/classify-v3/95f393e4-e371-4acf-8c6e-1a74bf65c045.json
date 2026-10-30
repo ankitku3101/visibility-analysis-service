@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro appears to be missing major AI models like Anthropic's Claude and Google's Gemini, which are currently recognized as top-tier competitors alongside ChatGPT.\",\n  \"competitors\": [\"Claude\", \"Gemini\"],\n  \"ranked_list\": [\"ChatGPT\", \"Claude\", \"Gemini\", \"Perplexity\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

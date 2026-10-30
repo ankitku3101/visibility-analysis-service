@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Yes, Kasparro AI supports enterprise brands outside the US, with a specific focus on supporting clients in both the **US and India**.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

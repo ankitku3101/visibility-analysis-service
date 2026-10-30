@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"www.llmaudit.ai\",\n    \"geovisibility.in\",\n    \"brandauditor.io\",\n    \"www.aisearchvisibility.ai\"\n  ],\n  \"ranked_list\": [\n    \"www.llmaudit.ai\",\n    \"geovisibility.in\",\n    \"brandauditor.io\",\n    \"www.aisearchvisibility.ai\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

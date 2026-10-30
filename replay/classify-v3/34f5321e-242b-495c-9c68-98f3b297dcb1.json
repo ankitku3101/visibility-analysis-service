@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"cloro.dev\", \"ahrefs.com\"],\n  \"ranked_list\": [\"cloro.dev\", \"ahrefs.com\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

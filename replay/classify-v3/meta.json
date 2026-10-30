@@ -1,0 +1,12 @@
+{
+ "model": "qwen2.5:7b",
+ "options": {
+  "temperature": 0,
+  "num_ctx": 8192,
+  "num_predict": 1024
+ },
+ "retry_options": {
+  "temperature": 0.3
+ },
+ "prompt_version": "classify-v3"
+}

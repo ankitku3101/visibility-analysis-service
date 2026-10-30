@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026.\",\n  \"competitors\": [\"Third-Party Validation\", \"Reddit\", \"G2\", \"Capterra\"],\n  \"ranked_list\": [\"Third-Party Validation\", \"Fixing 'Category Entity Association'\", \"Represent & Reinforce\", \"The '3R' Method\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"seoClarity\",\n    \"SE Ranking\",\n    \"Veza Digital\",\n    \"iPullRank\"\n  ],\n  \"ranked_list\": [\n    \"seoClarity\",\n    \"SE Ranking\",\n    \"Veza Digital\",\n    \"iPullRank\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

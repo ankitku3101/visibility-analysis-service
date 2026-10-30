@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Most onboarding problems with AI visibility tools are not caused by the software itself—they stem from unclear expectations, weak measurement design, and trying to treat AI visibility like traditional SEO.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

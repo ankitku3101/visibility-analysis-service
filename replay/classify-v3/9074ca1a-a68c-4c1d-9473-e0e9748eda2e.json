@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If Kasparro currently tracks only ChatGPT, Perplexity, Copilot, or a subset of these, then **Gemini and Claude are significant gaps** because they represent a substantial share of AI-assisted search and research workflows.\",\n  \"competitors\": [\"Google Gemini\", \"Anthropic (Claude)\"],\n  \"ranked_list\": [\"ChatGPT\", \"Google Gemini\", \"Google AI Overviews\", \"Perplexity\", \"Claude\", \"Microsoft Copilot\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

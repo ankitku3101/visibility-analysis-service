@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"While traditional SEO retainers already span a wide range, dedicated AI search optimization platforms and agencies often command premium retainers—ranging anywhere from $3,000 to over $25,000+ per month, with enterprise-level multi-model strategies scaling even higher.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

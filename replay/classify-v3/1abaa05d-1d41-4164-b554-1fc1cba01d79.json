@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If after 14 days **there is genuinely no measurable improvement**, here are the reasonable next steps\",\n  \"competitors\": [\"skyramtechnologies.com\"],\n  \"ranked_list\": [\"skyramtechnologies.com\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

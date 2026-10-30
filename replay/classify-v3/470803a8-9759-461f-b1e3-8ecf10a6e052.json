@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Profound\", \"Peec AI\", \"Otterly AI\", \"Scrunch\", \"Geoptie\", \"Ahrefs\", \"Semrush\", \"AnswerLift\", \"LLM Pulse\"],\n  \"ranked_list\": [\"Profound\", \"Peec AI\", \"Otterly AI\", \"Scrunch\", \"Geoptie\", \"Ahrefs\", \"Semrush\", \"AnswerLift\", \"LLM Pulse\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

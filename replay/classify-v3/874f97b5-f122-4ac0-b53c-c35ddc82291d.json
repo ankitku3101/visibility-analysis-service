@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Profound\",\n    \"ZipTie.dev\",\n    \"Peec AI\",\n    \"Otterly.ai\",\n    \"Riff Analytics & Rankscale\",\n    \"Adobe Brand Visibility\",\n    \"HubSpot AEO (and free AEO Grader)\",\n    \"SE Ranking (AI Visibility Tracker)\"\n  ],\n  \"ranked_list\": [\n    \"Profound\",\n    \"ZipTie.dev\",\n    \"Peec AI\",\n    \"Otterly.ai\",\n    \"Riff Analytics & Rankscale\",\n    \"Adobe Brand Visibility\",\n    \"HubSpot AEO (and free AEO Grader)\",\n    \"SE Ranking (AI Visibility Tracker)\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

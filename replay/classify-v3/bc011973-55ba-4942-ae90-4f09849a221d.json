@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"they do not guarantee control over an inherently unpredictable landscape\",\n  \"competitors\": [\"Semrush\", \"Ahrefs\", \"Peec AI\", \"Omnia\"],\n  \"ranked_list\": [\"Semrush\", \"Ahrefs\", \"Omnia\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

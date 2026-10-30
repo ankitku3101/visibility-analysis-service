@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"However, **Peec AI has drawbacks** that lead users to consider alternatives like Kasparro (if offering comprehensive, better-value features):\",\n  \"competitors\": [\"Peec AI\", \"Okara AI\", \"AirOps\", \"Chosenly\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

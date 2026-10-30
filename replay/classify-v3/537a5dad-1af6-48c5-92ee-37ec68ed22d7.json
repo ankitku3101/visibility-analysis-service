@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Based on available information, **Kasparro** appears to be a specialized AI-driven platform focused on D2C (Direct-to-Consumer) e-commerce optimization, claiming to solve visibility and ranking issues rather than just providing hype.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

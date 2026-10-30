@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"I couldn't find evidence of a substantial body of independent enterprise user reviews specifically about **Kasparro's AI Revenue Diagnostic**.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

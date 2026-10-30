@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Deciding whether to buy a paid AI search tracking tool (like those monitoring ChatGPT, Perplexity, or Google AI Overviews) or build an internal tracker depends on your scale, resources, and how fluid AI search dynamics are. For almost all growing businesses, **paid tools offer significantly better value** when factoring in the total cost of development and maintenance.\",\n  \"competitors\": [\"ChatGPT\", \"Perplexity\", \"Google AI Overviews\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

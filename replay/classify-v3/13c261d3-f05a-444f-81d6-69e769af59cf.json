@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"HubSpot AEO\",\n    \"Quattr GEO\",\n    \"AI-Netra\",\n    \"Forzeo\",\n    \"Topify GEO Platform\",\n    \"Ahrefs Brand Radar\"\n  ],\n  \"ranked_list\": [\n    \"Quattr\",\n    \"HubSpot AEO\",\n    \"Ahrefs (if you're already an Ahrefs customer)\",\n    \"AI-Netra\",\n    \"Forzeo\",\n    \"Topify\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

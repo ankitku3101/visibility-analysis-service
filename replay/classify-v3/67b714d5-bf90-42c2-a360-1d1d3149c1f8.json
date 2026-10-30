@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If Kasparro or any similar AI visibility service does not show improvements within 14 days, it is likely due to the nature of AI search, which prioritizes established authority and third-party validation over immediate technical changes.\",\n  \"competitors\": [\"Semrush\", \"Reddit\", \"G2\", \"Capterra\", \"industry blogs\", \"ChatGPT\", \"Gemini\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

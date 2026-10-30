@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Kasparro is a real, operational B2B startup in the AI-commerce space, not a typical \\\"wrapper\\\" tool scam mentioned in broader AI market discussions.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

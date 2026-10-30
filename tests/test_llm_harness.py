@@ -129,9 +129,28 @@ def test_replay_missing_fails_without_retry(tmp_path):
     assert (out.status, out.error_code, out.attempts) == ("failed", "replay_missing", 1)
 
 
-def test_ollama_http_500_is_provider_error(tmp_path):
-    out = run(ollama_with(lambda r: httpx.Response(500, text="boom"), tmp_path))
+def test_ollama_http_500_keeps_the_error_text(tmp_path):
+    calls = []
+    body = '{"error":"prediction aborted, token repeat limit reached"}'
+    out = run(ollama_with(lambda r: httpx.Response(500, text=body), tmp_path), log=lambda **kw: calls.append(kw))
     assert out.error_code == "provider_error"
+    assert "token repeat limit reached" in calls[0]["error_detail"]                       # → llm_calls.error
+    saved = ReplayStore(str(tmp_path)).load("k1")
+    assert "token repeat limit reached" in saved[0]["detail"]                             # → replay file
+
+
+def test_retries_use_different_options_than_attempt_1(tmp_path):
+    sent = []
+
+    def handler(request):
+        sent.append(json.loads(request.content)["options"])
+        if len(sent) == 1:
+            return httpx.Response(500, text='{"error":"token repeat limit reached"}')
+        return httpx.Response(200, json={"message": {"content": json.dumps(GOOD)}})
+
+    assert run(ollama_with(handler, tmp_path)).status == "succeeded"
+    assert sent[0]["temperature"] == 0 and "seed" not in sent[0]
+    assert sent[1]["temperature"] == 0.3 and sent[1]["seed"] == 2     # F6: a retry can differ, reproducibly
 
 
 def test_ollama_down_is_not_recorded(tmp_path):

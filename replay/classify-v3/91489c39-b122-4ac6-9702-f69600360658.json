@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Benchmark datasets\",\n    \"Automated evaluation ('LLM-as-a-judge')\",\n    \"MLflow Evaluation\",\n    \"DeepEval\",\n    \"Ragas\",\n    \"Arize Phoenix\",\n    \"Pairwise comparisons\",\n    \"Human preference collection\",\n    \"Regression test suites\",\n    \"Multi-dimensional evaluation\"\n  ],\n  \"ranked_list\": [\n    \"Benchmark datasets\",\n    \"Automated evaluation ('LLM-as-a-judge')\",\n    \"MLflow Evaluation\",\n    \"DeepEval\",\n    \"Ragas\",\n    \"Arize Phoenix\",\n    \"Pairwise comparisons\",\n    \"Human preference collection\",\n    \"Regression test suites\",\n    \"Multi-dimensional evaluation\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

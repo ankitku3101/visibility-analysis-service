@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Based on the currently available pricing information, **Kasparro's 14-day AI Revenue Diagnostic starts at ₹49,999**.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"RevenuePulseAI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

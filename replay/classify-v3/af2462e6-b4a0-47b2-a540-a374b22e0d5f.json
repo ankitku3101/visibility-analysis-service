@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Otterly AI\", \"Peec AI\", \"ZipTie\"],\n  \"ranked_list\": [\"Otterly AI\", \"Peec AI\", \"ZipTie\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

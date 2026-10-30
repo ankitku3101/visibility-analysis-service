@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"AthenaHQ\",\n    \"Siftly\",\n    \"Trysight\",\n    \"Pro/Scale\",\n    \"Otterly.AI\",\n    \"SEOptimer\",\n    \"Mentionable.ai\",\n    \"Visiblie\",\n    \"Olakai.ai\",\n    \"Witness.ai\"\n  ],\n  \"ranked_list\": [\n    \"AthenaHQ\",\n    \"Siftly\",\n    \"Trysight\",\n    \"Pro/Scale\",\n    \"Otterly.AI\",\n    \"SEOptimer\",\n    \"Mentionable.ai\",\n    \"Visiblie\",\n    \"Olakai.ai\",\n    \"Witness.ai\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

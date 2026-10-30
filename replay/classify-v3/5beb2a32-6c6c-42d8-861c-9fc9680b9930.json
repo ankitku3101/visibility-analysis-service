@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"It is NOT hype if: You are an individual sales rep or founder doing targeted LinkedIn prospecting, particularly targeting European markets, and you just need a clean, seamless browser extension to pull contact details without messing with heavy enterprise software.\",\n  \"negative\": true,\n  \"negative_quote\": \"It IS hype (or the wrong fit) if: You expect a magical all-in-one outbound machine that runs campaigns for you, or if you are hunting for high-volume US mobile numbers on a tight budget.\",\n  \"competitors\": [\"Wiza\", \"Apollo\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

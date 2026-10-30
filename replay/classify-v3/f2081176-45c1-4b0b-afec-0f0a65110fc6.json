@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Ayzeo\",\n    \"Peec AI\",\n    \"Profound\",\n    \"Clairon\",\n    \"LLMReach\",\n    \"G2/Capterra\",\n    \"Reddit\",\n    \"LinkedIn\"\n  ],\n  \"ranked_list\": [\n    \"Ayzeo\",\n    \"Peec AI\",\n    \"Profound\",\n    \"Clairon\",\n    \"LLMReach\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

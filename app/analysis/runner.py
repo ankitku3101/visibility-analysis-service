@@ -26,7 +26,8 @@ def _save_result(conn, run_id: int, result: dict, calls: list[dict], counts: dic
                 "INSERT INTO llm_calls (analysis_id, response_id, attempt, mode, model, prompt_version, status, "
                 "latency_ms, error) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 (run_id, result["response_id"], c["attempt"], client.mode, client.model, PROMPT_VERSION,
-                 c["status"], c["latency_ms"], c["error_code"]))
+                 c["status"], c["latency_ms"],
+                 f"{c['error_code']}: {c['error_detail']}"[:500] if c.get("error_detail") else c["error_code"]))
 
         def flag(v):
             return None if v is None else int(v)

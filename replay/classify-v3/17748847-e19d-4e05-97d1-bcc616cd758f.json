@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Onboarding with AI visibility tools often fails because teams treat them as traditional SEO keyword trackers rather than, as Brainlabs notes, a new, non-linear, 'brand impression' measurement system.\",\n  \"competitors\": [\"Brainlabs\", \"Beamtrace\", \"Visiblie\", \"Admetrics.io\", \"Semrush\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

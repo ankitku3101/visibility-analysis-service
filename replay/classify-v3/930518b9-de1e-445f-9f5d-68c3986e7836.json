@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Be cautious if the proposal is mostly: - A one-time setup repackaged as a monthly service - Generic SEO with \\\"AI\\\" added to the name - Vague promises like \\\"we'll get you into ChatGPT\\\" - Few concrete deliverables or KPIs\",\n  \"competitors\": [\"Pleiades Consultancy\", \"Pierview AI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

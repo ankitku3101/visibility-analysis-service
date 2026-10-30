@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\"recommended\": true, \"recommended_quote\": \"Kaspr is primarily available as a self-serve platform.\", \"negative\": false, \"negative_quote\": null, \"competitors\": [\"Cognism\"], \"ranked_list\": null}",
+  "error_code": null,
+  "detail": null
+ }
+]

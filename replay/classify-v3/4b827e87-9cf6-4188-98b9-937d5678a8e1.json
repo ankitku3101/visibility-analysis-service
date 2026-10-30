@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"trussed.ai\", \"siftly.ai\", \"Profound\", \"Semrush\", \"Braintrust.dev\"],\n  \"ranked_list\": [\n    \"trussed.ai\",\n    \"siftly.ai\",\n    \"Profound\",\n    \"Semrush\",\n    \"Braintrust.dev\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

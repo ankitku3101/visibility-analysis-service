@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Skepticism surrounding **AI recommendation optimization tools**—systems designed to help brands, content creators, and businesses position themselves to be favored or recommended by AI search engines and assistants—stems from a mix of technical limitations, economic anxieties, and deep-seated human distrust.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

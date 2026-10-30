@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Prompt hacks are brittle and temporary; Kasparro's methodology is built on foundational brand authority, structured data, and verifiable presence to ensure long-term visibility in AI-driven search.\",\n  \"competitors\": [\"v0.app\", \"getmereferred.com\", \"www.iimjobs.com\", \"bebee.com\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

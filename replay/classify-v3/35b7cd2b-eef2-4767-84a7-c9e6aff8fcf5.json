@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"There is no data available for a competitor named 'Kasparro', suggesting AthenaHQ is the more established or visible entity in this specialized market segment.\",\n  \"competitors\": [\"Dageno AI\", \"Analyze AI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

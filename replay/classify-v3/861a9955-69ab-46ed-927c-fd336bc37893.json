@@ -1,0 +1,16 @@
+[
+ {
+  "attempt": 1,
+  "kind": "error",
+  "raw": null,
+  "error_code": "provider_error",
+  "detail": "HTTP 500: {\"error\":\"prediction aborted, token repeat limit reached\"}"
+ },
+ {
+  "attempt": 2,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Publicly available enterprise user feedback specifically detailing an **\\\"AI revenue diagnostic\\\"** from Kasparro is currently limited, as much of their targeted audit and multi-module evaluation work is conducted directly through customized client engagements or remains part of their early-stage rollout.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

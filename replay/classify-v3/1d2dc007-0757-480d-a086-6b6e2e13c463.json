@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If you can share: - their monthly retainer, - any setup fee, - what they promise (qualified meetings, pipeline, or revenue), - and your startup's ARR/MRR and ACV, I can tell you whether the quote is competitive or likely overpriced compared with similar agencies.\",\n  \"competitors\": [\"Kaspr\", \"other B2B SaaS growth/outbound agencies\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

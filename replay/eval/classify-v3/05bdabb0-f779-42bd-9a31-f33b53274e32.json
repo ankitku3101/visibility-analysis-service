@@ -3,6 +3,7 @@
   "attempt": 1,
   "kind": "output",
   "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"While specific feedback on Kasparro is not in the search results, general enterprise sentiment in early 2026 shows that companies are moving away from 'AI hype' and looking for tools that directly impact P&L by reducing costs or increasing revenue.\",\n  \"competitors\": [\"Clari\"],\n  \"ranked_list\": null\n}",
-  "error_code": null
+  "error_code": null,
+  "detail": null
  }
 ]

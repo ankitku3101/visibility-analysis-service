@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Geoptie\",\n    \"Profound\",\n    \"Otterly AI\",\n    \"Peec AI\",\n    \"Semrush\",\n    \"SE Ranking\",\n    \"Ahrefs\",\n    \"HubSpot AEO Grader\",\n    \"Writesonic GEO Suite\"\n  ],\n  \"ranked_list\": [\n    \"Geoptie\",\n    \"Profound\",\n    \"Otterly AI\",\n    \"Peec AI\",\n    \"Semrush\",\n    \"SE Ranking\",\n    \"Ahrefs\",\n    \"HubSpot AEO Grader\",\n    \"Writesonic GEO Suite\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

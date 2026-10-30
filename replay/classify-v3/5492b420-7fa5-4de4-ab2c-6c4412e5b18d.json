@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If you mean **Kasparro (the AI Revenue Engine for D2C brands)**, there isn't much independent evidence yet that it's producing consistent, measurable results across a broad customer base.\",\n  \"competitors\": [\"Profound\", \"Goodie AI\", \"AthenaHQ\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

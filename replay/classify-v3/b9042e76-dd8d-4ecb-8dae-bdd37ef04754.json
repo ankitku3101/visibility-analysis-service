@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Meridian\"],\n  \"ranked_list\": [\n    \"Leverage Reddit and Forums\",\n    \"Build High-Volume Third-Party Reviews\",\n    \"Optimize for 'Entity Association'\",\n    \"Focus on Trust Signals\",\n    \"Use AI Visibility Platforms\",\n    \"Create Unique, Problem-Focused Content\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

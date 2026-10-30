@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If Copilot tracking is important for your use case, it would be worth asking Kasparro directly whether it's: - already supported but not yet documented, - available in beta, or - on their roadmap.\",\n  \"competitors\": [\"ahrefs\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

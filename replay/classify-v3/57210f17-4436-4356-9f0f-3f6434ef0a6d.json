@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Yes, **Kasparro** —and similar specialized **Perplexity SEO** or **AI Search Optimization** strategies—can help an enterprise software brand increase its visibility, citations, and authority within Perplexity answers.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Perplexity\", \"Gemini\", \"ChatGPT\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Based on standard risks associated with third-party LLM-integrated tools, utilizing tools like Kasparro (an AI coding assistant) for, say, architectural development, generally depends on how you configure data privacy settings, though it brings inherent risks regarding LLM terms of service (ToS) and data security.\",\n  \"competitors\": [\"Claude\", \"GPT\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

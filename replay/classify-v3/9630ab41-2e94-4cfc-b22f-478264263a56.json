@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Yes, Kasparro tracks brand visibility, representation, and recommendations across major LLMs and AI search engines, including ChatGPT.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Claude\", \"Gemini\", \"Perplexity\", \"Google AI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

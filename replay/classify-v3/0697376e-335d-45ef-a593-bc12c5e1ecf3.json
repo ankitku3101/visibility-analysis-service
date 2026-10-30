@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Profound\",\n    \"Gauge\",\n    \"GetCito\",\n    \"Semrush\",\n    \"Ahrefs\",\n    \"Conductor\"\n  ],\n  \"ranked_list\": [\n    \"Profound\",\n    \"Gauge\",\n    \"GetCito\",\n    \"Semrush\",\n    \"Ahrefs\",\n    \"Conductor\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

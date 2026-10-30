@@ -118,9 +118,13 @@ def write_report(path: Path, r: dict) -> None:
         lines.append(f"| {e['probe']} | {e['expected']} | {e['found']} | {mark(e['ok'])} |")
     lines += ["", "## Failure → fix → regression", ""]
     for f in r["failure_log"]:
-        lines += [f"**{f['id']}** — {f['failure']}", f"- Diagnosis: {f['diagnosis']}", f"- Change: {f['change']}",
-                  f"- Regression check ({f.get('pass_if') or 'exact labels'}): "
-                  + ", ".join(f"{cid} {mark(ok)}" for cid, ok in f["regression"]), ""]
+        lines += [f"**{f['id']}** — {f['failure']}", f"- Diagnosis: {f['diagnosis']}", f"- Change: {f['change']}"]
+        if f["regression"]:
+            lines.append(f"- Regression check ({f.get('pass_if') or 'exact labels'}): "
+                         + ", ".join(f"{cid} {mark(ok)}" for cid, ok in f["regression"]))
+        if f.get("regression_tests"):
+            lines.append("- Regression tests (run by `pytest`): " + ", ".join(f"`{t}`" for t in f["regression_tests"]))
+        lines.append("")
     if r["known_disagreements"]:
         lines += ["## Known disagreements (not tuned away)", "", *[f"- {x}" for x in r["known_disagreements"]], ""]
     lines += ["## Limits of this evaluation", "", *[f"- {x}" for x in r["limits"]], ""]

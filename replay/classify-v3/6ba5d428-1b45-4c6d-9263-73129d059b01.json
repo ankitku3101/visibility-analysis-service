@@ -1,0 +1,16 @@
+[
+ {
+  "attempt": 1,
+  "kind": "error",
+  "raw": null,
+  "error_code": "provider_error",
+  "detail": "HTTP 500: {\"error\":\"prediction aborted, token repeat limit reached\"}"
+ },
+ {
+  "attempt": 2,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Based on the current landscape, determining if **Kasparro** (or any similar specialized B2B SaaS tool) is 'overpriced' depends entirely on its ability to drive revenue, reduce operational costs, or provide measurable efficiency for a startup.\",\n  \"competitors\": [\"Salesforce\", \"HubSpot\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

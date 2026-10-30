@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"AI visibility tracking is not inherently a gimmick, but it is currently more of a \\\"directional indicator\\\" than a precise science, making tools like Kasparro and its competitors useful for identifying trends rather than guaranteed ROI.\",\n  \"negative\": true,\n  \"negative_quote\": \"Extreme Inconsistency: AI outputs are notoriously variable; a query run twice might yield different results, making exact rank tracking impossible.\",\n  \"competitors\": [\"Microsoft Clarity\", \"Traqer.ai\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

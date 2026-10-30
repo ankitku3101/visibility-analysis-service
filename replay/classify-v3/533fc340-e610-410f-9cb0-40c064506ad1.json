@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Kasparro appears to support enterprise brands outside the US, but it is not yet as visibly global or internationally proven as Profound.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Profound\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

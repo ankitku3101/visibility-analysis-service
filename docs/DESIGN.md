@@ -97,13 +97,14 @@ competitors: [str], ranked_list: [str]|null   (only if the answer has an explici
 ```
 
 **Validation (code):** JSON must parse and match the model. Output over 8,000 chars → invalid.
-Each `true` label needs a quote found in `answer_text` that is not an instruction to the classifier (injection guard). Normalised first: whitespace collapsed,
-case ignored, markdown `*`/`` ` `` removed, curly quotes and dashes made plain (146/150 answers use `**bold**`).
-If not mentioned, `recommended` and `negative` are forced false. Position = index of Kasparro in
-`ranked_list`, else `null`. Competitor names are trimmed and matched against a small alias map.
+Each `true` label needs a quote found in `answer_text` that is not an instruction to the classifier (injection guard),
+compared as words only: same words, same order; case, punctuation and markdown ignored. If not mentioned, `recommended`
+and `negative` are forced false. Position = index of Kasparro in `ranked_list`, else `null`. Competitors: alias map, and
+the name must appear in the answer prose (not only in a cited link).
 
 **Retries:** up to `LLM_MAX_RETRIES` (3 attempts total). Timeout/connection error → same request. Bad JSON, schema
-error or quote not found → the next attempt adds the previous output and what was wrong (at temperature 0 a plain retry repeats itself). Then `failed` with the last error code (`timeout`, `malformed_output`,
+error or quote not found → the next attempt adds the previous output and what was wrong. Retries use temperature 0.3 with a fixed
+seed, because at temperature 0 a retry repeats itself (incl. Ollama repetition loops). Provider error text is stored in `llm_calls`. Then `failed` with the last error code (`timeout`, `malformed_output`,
 `empty_output`, `evidence_not_found`, `call_limit_reached`). One failed response never stops the run.
 
 **Runner:** `threading.Thread`, own SQLite connection (WAL mode, `busy_timeout=5000`), one run at a time,
@@ -173,8 +174,7 @@ Decision: the body names the `version`. It must be the latest version and `submi
 Export: `?version=N` or the latest. Allowed only if that version is `approved` and its hash still matches.
 Export JSON has version, approval event, hashes, llm_mode and version tags. All actions go to `review_events`.
 
-**Auth:** `Authorization: Bearer <token>` compared with `hmac.compare_digest` to the two env tokens.
-The actor name comes from the matched token, never from the body.
+**Auth:** bearer token compared (`hmac.compare_digest`) to the two env tokens; the actor comes from the token, never the body.
 
 ## 11. Evaluation
 

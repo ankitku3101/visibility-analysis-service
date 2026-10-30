@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Semrush (AI Visibility Toolkit)\",\n    \"Ahrefs Brand Radar AI\",\n    \"HubSpot AEO Tool\",\n    \"Peec AI\",\n    \"Profound\",\n    \"SE Ranking\",\n    \"Superlines\"\n  ],\n  \"ranked_list\": [\n    \"Semrush (AI Visibility Toolkit)\",\n    \"Ahrefs Brand Radar AI\",\n    \"HubSpot AEO Tool\",\n    \"Peec AI\",\n    \"Profound\",\n    \"SE Ranking\",\n    \"Superlines\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

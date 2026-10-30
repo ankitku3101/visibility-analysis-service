@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"I wouldn't label Kasparro as illegitimate based on the available information\",\n  \"negative\": true,\n  \"negative_quote\": \"I would also treat it as an emerging startup rather than an established market leader\",\n  \"competitors\": [\"FrictionAI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

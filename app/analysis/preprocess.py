@@ -73,16 +73,21 @@ def named_in_prose(name: str, prose: str) -> bool:
     return len(first) >= 4 and re.search(rf"\b{re.escape(first)}", p) is not None
 
 
+WORD = re.compile(r"\w+")
+
+
 def normalise(text: str) -> str:
-    return " ".join(text.translate(PLAIN).lower().split())
+    """Words only, lowercase: punctuation, markdown and spacing never decide whether a quote matches.
+    The full run showed why: 'Gemini , which' vs 'Gemini, which' and \"'Kasparro,'\" vs \"'Kasparro',\" (F5)."""
+    return " ".join(WORD.findall(text.translate(PLAIN).lower()))
 
 
 def quote_in_text(quote: str | None, text: str) -> bool:
-    """Is the quote really in the text? Ignores whitespace, case, markdown * and `, curly quotes and dashes."""
+    """Is the quote really in the text? Same words in the same order, matched on whole words."""
     if not quote or not quote.strip():
         return False
     q = normalise(quote)
-    return len(q) >= 8 and q in normalise(text)
+    return len(q) >= 8 and f" {q} " in f" {normalise(text)} "
 
 
 def kasparro_cited(citations: list[dict]) -> bool:

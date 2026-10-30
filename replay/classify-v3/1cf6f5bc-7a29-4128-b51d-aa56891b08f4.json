@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Yes, **Kasparro** (an AI visibility and commerce infrastructure platform that tracks and optimizes how brands are discovered and recommended by AI engines like ChatGPT, Gemini, and Perplexity) explicitly supports enterprise and mid-market brands **outside the US**.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Profound\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

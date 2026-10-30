@@ -3,6 +3,7 @@
   "attempt": 1,
   "kind": "output",
   "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If your goal is **ranking in ChatGPT and AI search**, I'd put them roughly like this:\\n1. Peec AI ⭐⭐⭐⭐⭐ (best value)\\n2. Profound ⭐⭐⭐⭐⭐ (enterprise)\\n3. Kasparro ⭐⭐⭐⭐☆ (good, but harder to justify unless you need its specific workflow features)\",\n  \"competitors\": [\"Peec AI\", \"Profound\", \"Surferstack\", \"Lantern\"],\n  \"ranked_list\": [\"Peec AI\", \"Profound\", \"Kasparro\"]\n}",
-  "error_code": null
+  "error_code": null,
+  "detail": null
  }
 ]

@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"HubSpot\", \"Metricus\", \"Brand24\"],\n  \"ranked_list\": [\"HubSpot\", \"Metricus\", \"Brand24\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

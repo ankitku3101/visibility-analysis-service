@@ -55,6 +55,18 @@ def test_regression_rule_not_recommended():
     assert not regression_ok(None, e, pred(status="failed"))                       # default: exact labels
 
 
+def test_failure_log_regression_tests_exist():
+    """Every regression test named in the failure log must exist, so the log cannot point at nothing."""
+    import importlib
+    labels = json.loads(LABELS.read_text(encoding="utf-8"))
+    for f in labels["failure_log"]:
+        assert f["regression_case_ids"] or f.get("regression_tests"), f["id"]
+        for ref in f.get("regression_tests", []):
+            path, name = ref.split("::")
+            module = importlib.import_module(path.removesuffix(".py").replace("/", "."))
+            assert hasattr(module, name), ref
+
+
 def test_labels_file_is_consistent():
     labels = json.loads(LABELS.read_text(encoding="utf-8"))
     assert all(s["ok"] for s in grader.score_math_check(labels["cases"]))

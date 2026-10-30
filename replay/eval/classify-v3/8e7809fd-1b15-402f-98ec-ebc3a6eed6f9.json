@@ -2,7 +2,8 @@
  {
   "attempt": 1,
   "kind": "output",
-  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If you miss these windows and try to cancel on the day of renewal, the system will automatically process the charge for the next cycle, and they generally will not refund it.\",\n  \"competitors\": [\"fundraiseinsider.com\"],\n  \"ranked_list\": null\n}",
-  "error_code": null
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kaspr requires advance cancellation notice before renewal, decisions across most opaque-billing B2B data platforms.\",\n  \"competitors\": [\"fundraiseinsider.com\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
  }
 ]

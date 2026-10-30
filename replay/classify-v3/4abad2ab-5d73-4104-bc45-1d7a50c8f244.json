@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If an AI visibility or Generative Engine Optimization (GEO) tool like Kasparro doesn't show an increase in your metrics after 14 days, **it is rarely a sign of permanent failure.**\",\n  \"competitors\": [\"crecerank.com\", \"www.seobrand.com\", \"www.frase.io\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

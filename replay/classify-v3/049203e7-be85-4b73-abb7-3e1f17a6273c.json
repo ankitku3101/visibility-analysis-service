@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Many GEO (Generative Engine Optimization) tools are promising more precision than they can reliably deliver.\",\n  \"competitors\": [\"Genee Tech\", \"MarketScale\", \"NBound Marketing\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

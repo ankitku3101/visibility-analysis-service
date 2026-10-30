@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Onboarding with **AI visibility and Generative Engine Optimization (GEO) tools** (platforms designed to track and optimize how brands appear in ChatGPT, Perplexity, Google AI Overviews, and Gemini) often hits snags due to a mismatch between traditional SEO thinking and modern AI mechanics.\",\n  \"competitors\": [\"aeovision.ai\"],\n  \"ranked_list\": [\"aeovision.ai\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

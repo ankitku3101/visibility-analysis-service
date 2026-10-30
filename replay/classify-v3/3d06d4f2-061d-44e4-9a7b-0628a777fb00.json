@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If a vendor promises: - guaranteed ChatGPT rankings - permanent AI placement - predictable AI recommendations I'd be cautious.\",\n  \"competitors\": [\"ChatGPT\", \"Gemini\", \"Claude\", \"Perplexity\"],\n  \"ranked_list\": [\n    \"Monitoring products (worth considering)\",\n    \"Workflow products (sometimes useful)\",\n    \"Guaranteed AI rankings (be skeptical)\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

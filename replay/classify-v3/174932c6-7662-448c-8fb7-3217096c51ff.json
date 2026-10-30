@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Keyword.com\",\n    \"Dedicated GEO (Generative Engine Optimization) Platforms\",\n    \"Braintrust\",\n    \"Maxim AI\",\n    \"PromptLayer\",\n    \"Promptfoo\",\n    \"LLM-as-a-Judge Frameworks\"\n  ],\n  \"ranked_list\": [\n    \"Keyword.com\",\n    \"Dedicated GEO (Generative Engine Optimization) Platforms\",\n    \"Braintrust\",\n    \"Maxim AI\",\n    \"PromptLayer\",\n    \"Promptfoo\",\n    \"LLM-as-a-Judge Frameworks\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

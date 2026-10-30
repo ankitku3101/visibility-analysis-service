@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Yes, many low-effort AI 'brand platforms' are little more than pre-packaged 'prompt hacks' that become obsolete as AI models evolve, causing them to produce generic or inconsistent content over time.\",\n  \"competitors\": [\"Kasparro\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

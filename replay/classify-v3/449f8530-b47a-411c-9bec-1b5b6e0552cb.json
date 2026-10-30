@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Profound is generally considered superior to smaller, niche alternatives like Kasparro/Cairrot for tracking how Claude recommends B2B software, particularly for enterprises needing deep, data-driven insights.\",\n  \"competitors\": [\"Profound\", \"Athenahq\", \"Bluefish\", \"Rankr\", \"Brand Armor AI\", \"Gracker.ai\", \"Conductor\"],\n  \"ranked_list\": [\"Profound\", \"Athenahq\", \"Bluefish\", \"Rankr\", \"Brand Armor AI\", \"Gracker.ai\", \"Conductor\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

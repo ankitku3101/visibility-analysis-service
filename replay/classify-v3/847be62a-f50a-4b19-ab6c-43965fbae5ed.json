@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"MindStudio\",\n    \"GeneratePrompt.ai\",\n    \"Perplexity AI\",\n    \"You.com\",\n    \"Claude\",\n    \"Gemini\"\n  ],\n  \"ranked_list\": [\n    \"AI Agent Research Tools\",\n    \"Automated Prompt Optimizers\",\n    \"Specialized 'Deep Research' Agents\",\n    \"Browser Extensions\",\n    \"AI-Powered Search Engines\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

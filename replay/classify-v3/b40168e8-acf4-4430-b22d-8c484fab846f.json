@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Using an audit platform maps out the exact gaps (e.g., missing G2 momentum, lack of structured comparison pages, or absence of community footprint).\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"bebee.com\", \"G2\", \"Capterra\", \"Reddit\", \"Brand24\", \"Mention\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

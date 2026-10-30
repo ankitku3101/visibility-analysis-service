@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Choose Kasparro if you primarily want: An executive-level assessment of AI readiness\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Otterly AI\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

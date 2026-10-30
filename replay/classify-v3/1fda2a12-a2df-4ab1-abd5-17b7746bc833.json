@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Kasparro is an active startup with real paying enterprise and D2C clients across India and the US, scaling its operations with active teams in Bengaluru.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Kaspr\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

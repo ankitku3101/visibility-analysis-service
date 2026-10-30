@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"People are skeptical about AI recommendation optimization tools—often called Generative Engine Optimization (GEO) or AI Engine Optimization (AEO)—due to high rates of inaccuracy, lack of transparency, and difficulty measuring success.\",\n  \"competitors\": [\"ChatGPT\", \"TripAdvisor\", \"Forbes\", \"Reddit\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

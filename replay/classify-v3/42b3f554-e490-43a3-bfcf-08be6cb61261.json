@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Building an internal tool is generally only advised for companies with highly specialized needs or massive, enterprise-scale data requirements.\",\n  \"competitors\": [\"ZipTie\", \"Otterly\", \"Peec AI\"],\n  \"ranked_list\": [\"ZipTie\", \"Otterly\", \"Peec AI\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

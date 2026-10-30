@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"For small software companies operating on tight budgets and limited bandwidth, paying for dedicated AI recommendation tracking software is **rarely worth the overhead**.\",\n  \"competitors\": [\"Techsalerator\", \"Clearbit\"],\n  \"ranked_list\": [\"ChatGPT\", \"Perplexity\", \"Claude\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

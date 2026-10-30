@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"The short answer is **yes, they are mostly making empty promises if they claim precise, guaranteed tracking, but some offer useful directional data.**\",\n  \"competitors\": [\"Perplexity\", \"ChatGPT\", \"Gemini\", \"Anthropic\", \"Google\", \"OpenAI\", \"TrustMary\", \"Digiday\", \"Write-a-Catalyst\"],\n  \"ranked_list\": [\"Perplexity\", \"ChatGPT\", \"Gemini\", \"Anthropic\", \"Google\", \"OpenAI\", \"TrustMary\", \"Digiday\", \"Write-a-Catalyst\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

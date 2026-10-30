@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"Emberos\", \"Ahrefs\", \"Peec AI\", \"Otterly.ai\"],\n  \"ranked_list\": [\"Profound\", \"Ahrefs\", \"Emberos\", \"Peec AI\", \"Otterly.ai\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

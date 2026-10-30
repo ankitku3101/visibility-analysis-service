@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"AI visibility is a citation model, not a search ranking model. You are either cited, or you are not. Platforms claiming to guarantee a specific 'rank' are often overpromising.\",\n  \"competitors\": [\"Profound\", \"Semrush AI Visibility Toolkit\", \"Omnia\", \"Ahrefs Brand Radar\", \"HubSpot AEO\"],\n  \"ranked_list\": [\"Profound\", \"Semrush AI Visibility Toolkit\", \"Omnia\", \"Ahrefs Brand Radar\", \"HubSpot AEO\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

@@ -45,10 +45,11 @@ class ReplayStore:
             return []
         return data if isinstance(data, list) else []
 
-    def record(self, key: str, attempt: int, kind: str, raw: str | None = None, error_code: str | None = None):
+    def record(self, key: str, attempt: int, kind: str, raw: str | None = None, error_code: str | None = None,
+               detail: str | None = None):
         # Attempt 1 starts a fresh list, so a new local run replaces the old recording.
         entries = [] if attempt == 1 else self.load(key)[: attempt - 1]
-        entries.append({"attempt": attempt, "kind": kind, "raw": raw, "error_code": error_code})
+        entries.append({"attempt": attempt, "kind": kind, "raw": raw, "error_code": error_code, "detail": detail})
         self._write(self.path(key), entries)
 
     def write_meta(self, meta: dict) -> None:
@@ -76,5 +77,5 @@ class ReplayClient:
         if entry.get("kind") == "timeout":
             raise LLMTimeout()
         if entry.get("kind") == "error":
-            raise LLMError(entry.get("error_code") or "provider_error")
+            raise LLMError(entry.get("error_code") or "provider_error", entry.get("detail") or "")
         return entry.get("raw") or ""

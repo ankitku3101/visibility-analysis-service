@@ -47,6 +47,22 @@ def test_quote_in_text_ignores_markdown_and_typography():
     assert not quote_in_text("yet.", answer)  # too short to count as evidence
 
 
+@pytest.mark.parametrize("quote, source", [  # F5: the two real punctuation differences from the full run
+    ("missing major AI models like Anthropic's Claude and Google's Gemini, which are recognized",
+     "kasparro appears to be missing major AI models like Anthropic's Claude and Google's Gemini , which are recognized"),
+    ("no data available for a competitor named 'Kasparro', suggesting AthenaHQ is the more established",
+     "There is no data available for a competitor named 'Kasparro,' suggesting AthenaHQ is the more established"),
+])
+def test_quote_in_text_ignores_punctuation(quote, source):
+    assert quote_in_text(quote, source)
+
+
+def test_quote_in_text_needs_whole_words_in_order():
+    answer = "Kasparro audits catalogs for D2C brands."
+    assert not quote_in_text("brands for D2C catalogs audits", answer)      # same words, wrong order
+    assert not quote_in_text("asparro audits catalogs", answer)             # partial word
+
+
 def test_kasparro_cited():
     assert kasparro_cited([{"domain": "kasparro.com", "url": "https://kasparro.com/"}])
     assert kasparro_cited([{"domain": None, "url": "https://blog.kasparro.com/post"}])

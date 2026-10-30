@@ -102,7 +102,7 @@ def call_with_retries(client: LLMClient, key: str, messages: list[dict], setting
         attempt += 1
         budget.used += 1
         started = time.perf_counter()
-        data, error, raw, label = None, None, None, ""
+        data, error, raw, label, detail = None, None, None, "", None
         try:
             raw = client.complete(key, current, attempt)
             data = parse_output(raw)
@@ -112,11 +112,14 @@ def call_with_retries(client: LLMClient, key: str, messages: list[dict], setting
             error = "timeout"
         except (LLMError, OutputError) as e:
             error = e.code
+            detail = str(e) if str(e) != e.code else None
         except EvidenceError as e:
             error, label = "evidence_not_found", str(e)
+            detail = f"{label}_quote not valid evidence"
         latency_ms = int((time.perf_counter() - started) * 1000)
         if log:
-            log(attempt=attempt, status="ok" if error is None else "error", latency_ms=latency_ms, error_code=error)
+            log(attempt=attempt, status="ok" if error is None else "error", latency_ms=latency_ms, error_code=error,
+                error_detail=detail)
         if error is None:
             return Outcome("succeeded", data, None, attempt)
         last_error = error

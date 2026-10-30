@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"aigrow.gg\", \"www.layer3labs.io\", \"kamyarshah.com\"],\n  \"ranked_list\": [\"aigrow.gg\", \"www.layer3labs.io\", \"kamyarshah.com\"]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

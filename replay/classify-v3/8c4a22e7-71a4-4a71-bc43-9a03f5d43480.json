@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If the answer is essentially 'our prompts,' the moat is likely to be shallow. If the answer is 'our structured brand knowledge, evaluation framework, governance, integrations, and context pipeline,' those are assets that are much harder to replicate.\",\n  \"competitors\": [\"KongHQ\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

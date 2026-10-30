@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"If a startup's entire competitive advantage is a clever instruction set typed into a text box, **it will inevitably fail**—either when the base models update or when users realize they can write the same prompt themselves.\",\n  \"competitors\": [\"Gemini\", \"Claude\", \"Perplexity\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

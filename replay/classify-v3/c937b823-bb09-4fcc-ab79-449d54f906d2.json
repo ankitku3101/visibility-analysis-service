@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Through these metrics, the Kasparro audit provides quantitative scores, specific content/technical findings, and actionable recommendations to help brands ensure they are actively recommended during AI-driven buyer research.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"v0.app\"],\n  \"ranked_list\": null\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

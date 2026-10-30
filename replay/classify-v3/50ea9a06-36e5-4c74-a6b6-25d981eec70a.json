@@ -1,0 +1,9 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"CoreMention\",\n    \"Gracker.ai\",\n    \"Dageno AI\",\n    \"Scrunch AI\",\n    \"Semsrush's AI Toolkit\"\n  ],\n  \"ranked_list\": [\n    \"CoreMention\",\n    \"Gracker.ai\",\n    \"Dageno AI\",\n    \"Scrunch AI\",\n    \"Semsrush's AI Toolkit\"\n  ]\n}",
+  "error_code": null,
+  "detail": null
+ }
+]

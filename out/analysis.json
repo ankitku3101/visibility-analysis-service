@@ -1,0 +1,4384 @@
+{
+ "report_id": 1,
+ "analysis_id": 1,
+ "version": 2,
+ "is_latest": true,
+ "notice": null,
+ "status": "approved",
+ "content_hash": "a912637c668462c632bca987da11cc9b7a52245177968be1fd4a0743b1066e92",
+ "approval": {
+  "actor": "reviewer",
+  "comment": "Evidence checked against quotes; remedies are investigations with clear measures. Approved.",
+  "at": "2026-10-30T12:23:24.287756+00:00"
+ },
+ "llm_mode": "local",
+ "model": "qwen2.5:7b",
+ "versions": {
+  "prompt": "classify-v3",
+  "category": "cat-v1",
+  "scoring": "score-v1"
+ },
+ "exported_by": "analyst",
+ "exported_at": "2026-10-30T12:23:24.569855+00:00",
+ "content": {
+  "diagnostics": [
+   {
+    "evidence": [
+     {
+      "quote": "- **CoreMention:** Monitors AI visibility across ChatGPT, Perplexity, Claude, and Gemini to track brand mentions, competitor comparisons, and source tracking.",
+      "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a"
+     },
+     {
+      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpotâ€™s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
+      "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d"
+     },
+     {
+      "quote": "| [Profound](https://www.tryprofound.com/) | Enterprise brands | AI share of voice, prompt monitoring, citations, competitor analysis |",
+      "response_id": "ee8878c5-69b1-41c4-82a0-13a83c237f2f"
+     },
+     {
+      "quote": "- **Semrush (AI Visibility Toolkit):** Offers specialized tools to track brand mentions, share of voice, and sentiment across AI engines like ChatGPT and Google SGE.[](https://saastock.com/blog/essential-tools-for-monitoring-your-brand-in-ai-search) [[1]](https://saastock.com/blog/essential-tools-for-monitoring-your-brand-in-ai-search)",
+      "response_id": "4334ee7a-6315-4312-b0ca-0a58bcd6270c"
+     }
+    ],
+    "explanation": "Hypothesis, not proven: (a) the 25 unbranded prompts ask about B2B SaaS and software brands, while the brand brief says Kasparro's website focuses on D2C brands and product catalogs, so engines may not see Kasparro as a fit; one ChatGPT answer says it is 'aimed much more at retail and CPG brands'. (b) The sources these answers cite (reddit.com 20, linkedin.com 20, youtube.com 19, medium.com 13 of 75 responses) may simply not name Kasparro, while competitors are covered there.",
+    "id": "D1",
+    "pattern": "Kasparro is named in 0/75 succeeded unbranded answers (AI Mode 0/25, ChatGPT 0/25, Gemini 0/25; 0 failed, 0 skipped). Most-named alternatives in unbranded answers: Profound (15), Peec AI (16), Otterly (14), Semrush (6), Ahrefs (6).",
+    "test_evidence": "Open the comparison and list pages cited by the 75 unbranded answers (citations are unverified today) and count how many name Kasparro vs Profound, Peec AI and Otterly. Add a few D2C/commerce unbranded prompts: if Kasparro appears there but not in the B2B SaaS prompts, (a) is supported.",
+    "title": "Unbranded discovery: is Kasparro included?"
+   },
+   {
+    "evidence": [
+     {
+      "quote": "Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026.",
+      "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2"
+     },
+     {
+      "quote": "I couldn't find independent evidence showing that Kasparro consistently delivers measurable improvements for B2B SaaS companies specifically.",
+      "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc"
+     },
+     {
+      "quote": "If you mean **Kasparro (the AI Revenue Engine for D2C brands)**, there isn't much independent evidence yet that it's producing consistent, measurable results across a broad customer base.",
+      "response_id": "5492b420-7fa5-4de4-ab2c-6c4412e5b18d"
+     },
+     {
+      "quote": "I would also treat it as an emerging startup rather than an established market leader",
+      "response_id": "847af3d3-88c3-4cad-ad9f-a1a4d6889052"
+     },
+     {
+      "quote": "Yes, **Kasparro** is designed specifically for this use case.",
+      "response_id": "6b6e79d3-a582-4d23-8fa6-714c9e982af2"
+     }
+    ],
+    "explanation": "Hypothesis: most negative text is about missing independent proof or low recognition, not about a concrete flaw (see quotes). Engines seem to find little third-party evidence about Kasparro and say so. Answers that cite kasparro.com lean positive (AI Mode: 8 such answers, 7 recommend), but this is a correlation in one snapshot, not a cause.",
+    "id": "D2",
+    "pattern": "On branded prompts Kasparro is mentioned in 72/75 succeeded answers. Of the answers that mention it, 29/72 describe it negatively and 25/72 recommend it (AI Mode negative 11/25, recommended 10/25, ChatGPT negative 13/25, recommended 7/25, Gemini negative 5/22, recommended 8/22; 0 failed).",
+    "test_evidence": "Read all 29 negative quotes and tag each as 'missing evidence / low recognition' vs 'concrete criticism'. Check whether independent reviews or case studies about Kasparro exist. Compare negative rates in answers with vs without a kasparro.com citation on a repeat capture.",
+    "title": "Branded answers: how Kasparro is described"
+   },
+   {
+    "evidence": [
+     {
+      "quote": "Kaspr is primarily available as a **self-serve platform**.",
+      "response_id": "136b8240-008c-46ff-b744-592c4d859e98"
+     },
+     {
+      "quote": "Whether **Kaspr** delivers actual results or is just marketing hype depends heavily on **where you are prospecting** and **what you expect the tool to do**.",
+      "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930"
+     },
+     {
+      "quote": "Canceling **Kaspr** (assuming you mean the B2B contact data and LinkedIn prospecting tool) is **technically straightforward** and can be handled directly through your dashboard, but you have to watch out for **strict notice periods** to avoid getting billed for another cycle.[fundraiseinsider.com](https://fundraiseinsider.com/blog/kaspr-alternatives/#:~:text=Kaspr%20requires%20advance%20cancellation%20notice%20before%20renewal,decisions%20across%20most%20opaque-billing%20B2B%20data%20platforms.)",
+      "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9"
+     },
+     {
+      "quote": "If you're referring to the AI tool called **Kasparro**, I couldn't find a well-established service by that exact name, so I can't make a definitive statement about its practices.",
+      "response_id": "a46bc527-5558-40b7-a5b8-f1c22435dd03"
+     },
+     {
+      "quote": "Kasparro (assuming you mean the AI visibility platform rather than another product with a similar name) is aimed much more at **retail and CPG brands**. Its metrics revolve around AI shopping recommendations, 'Brand Inclusion Rate,' 'Share of Invisible Shelf,' and agentic commerce rather than B2B software evaluation.",
+      "response_id": "0f217f49-ee02-44ea-853d-61fbcc7a9895"
+     }
+    ],
+    "explanation": "Hypothesis: Gemini has no clear first-party source for Kasparro (it never cites kasparro.com and leans on job postings and LinkedIn), so with a similar, better-known name it sometimes picks Kaspr. AI Mode cites kasparro.com most often and scores highest on the same prompts.",
+    "id": "D3",
+    "pattern": "On the 25 branded prompts that all three engines answered successfully, the average score is AI Mode 60.4, ChatGPT 53.2, Gemini 52.8 (gap 7.6 points). Gemini answered about a different product, 'Kaspr' (a B2B contact data tool), in 3/25 branded answers; these are the 3 branded answers with no Kasparro mention. ChatGPT also doubted the name in some answers. Source counts (SQL over the citations table, all unverified): kasparro.com is cited in AI Mode 8/50, ChatGPT 6/50, Gemini 0/50 responses. Job-posting pages with 'kasparro' in the URL (bebee.com, getmereferred.com, iimjobs.com) are cited in 17 Gemini and 6 AI Mode branded answers.",
+    "test_evidence": "Check kasparro.com crawl access for Google and OpenAI search bots and whether the homepage states in text what Kasparro is. Re-ask the 3 Kaspr prompts on Gemini on a new capture; check whether the answers that cite job postings describe Kasparro from those postings.",
+    "title": "Engines differ, and Gemini mixes Kasparro up with Kaspr"
+   }
+  ],
+  "notes": "Data: one capture per prompt and engine (31 July 2026); a snapshot, not a trend. All 2,439 citations are unverified: no cited page was opened. Analysis: qwen2.5:7b local, prompt classify-v3, categories cat-v1, scoring score-v1; 150/150 succeeded. Eval on 8 hand-labelled cases: LLM roughly ties a keyword baseline; known misses in eval/results/report.md. D3 source counts are SQL over the citations table. Branded and unbranded prompts are never merged. Active time: 5 h 55 min at approval (wall clock 12:00-17:55 on 30 Oct 2026, including about 50 min waiting on two full local model runs). README and DECISIONS.md were written after approval; the final total is in docs/TIME_LOG.md.",
+  "remedies": [
+   {
+    "action": "Investigation first (about 1 day): open the comparison/list pages cited by the unbranded answers and record which brands each names. Then (1) decide with the growth lead whether Kasparro targets B2B SaaS questions at all, given its D2C focus; (2) if yes, publish a factual page on kasparro.com that answers these questions using only claims Kasparro can support, and ask authors of the cited comparison pages for a fact check or inclusion. No paid placements, no invented claims.",
+    "diagnostic_ids": [
+     "D1"
+    ],
+    "effort": "medium",
+    "evidence": [
+     {
+      "quote": "- **CoreMention:** Monitors AI visibility across ChatGPT, Perplexity, Claude, and Gemini to track brand mentions, competitor comparisons, and source tracking.",
+      "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a"
+     },
+     {
+      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpotâ€™s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
+      "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d"
+     }
+    ],
+    "expected_benefit": "Tells us whether the gap is about fit (wrong audience) or coverage (missing from sources). If coverage, more sources that describe Kasparro make unbranded inclusion possible. No ranking or inclusion gain is promised.",
+    "id": "R1",
+    "priority": 1,
+    "problem": "Kasparro is named in 0/75 succeeded unbranded answers, while Peec AI (16), Profound (15) and Otterly (14) are named often. This is the main discovery problem: buyers who do not already know the name never see it.",
+    "title": "Find out why Kasparro is missing from unbranded answers, then fill the source gap",
+    "uncertainty": "High. The cause of 0/75 is unknown; this is one capture per prompt and engine; citations were not opened; engines may not use the pages we change.",
+    "validation_step": "Re-run the same 25 unbranded prompts on the same 3 engines with the same capture setup. Compare 'mentioned' (now 0/75, per engine 0/25) and the number of cited pages that name Kasparro. Repeat the capture at least twice before calling it a change."
+   },
+   {
+    "action": "Check robots.txt and page access for Googlebot and OAI-SearchBot; make sure the homepage and About page say in plain text what Kasparro is, who it serves and that it is not Kaspr; keep the same one-line description on the LinkedIn company page and job postings; add Organization structured data that matches the page (name, url, sameAs links). Google says no special AI markup is needed and eligibility does not guarantee inclusion.",
+    "diagnostic_ids": [
+     "D3"
+    ],
+    "effort": "low",
+    "evidence": [
+     {
+      "quote": "Kaspr is primarily available as a **self-serve platform**.",
+      "response_id": "136b8240-008c-46ff-b744-592c4d859e98"
+     },
+     {
+      "quote": "Whether **Kaspr** delivers actual results or is just marketing hype depends heavily on **where you are prospecting** and **what you expect the tool to do**.",
+      "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930"
+     },
+     {
+      "quote": "Canceling **Kaspr** (assuming you mean the B2B contact data and LinkedIn prospecting tool) is **technically straightforward** and can be handled directly through your dashboard, but you have to watch out for **strict notice periods** to avoid getting billed for another cycle.[fundraiseinsider.com](https://fundraiseinsider.com/blog/kaspr-alternatives/#:~:text=Kaspr%20requires%20advance%20cancellation%20notice%20before%20renewal,decisions%20across%20most%20opaque-billing%20B2B%20data%20platforms.)",
+      "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9"
+     }
+    ],
+    "expected_benefit": "Fewer answers about the wrong company, and answers built from Kasparro's own description instead of job ads.",
+    "id": "R2",
+    "priority": 2,
+    "problem": "Gemini answered about 'Kaspr' in 3/25 branded answers and cites kasparro.com in 0/50 responses, while it cites Kasparro job postings in 17 branded answers.",
+    "title": "Make Kasparro's identity clear and easy to find on its own site",
+    "uncertainty": "Medium. We did not open any page or check robots.txt. The mix-up may come from model training data, which site changes do not fix quickly.",
+    "validation_step": "Re-run the 25 branded prompts on Gemini: count answers about Kaspr (now 3/25) and answers citing kasparro.com (now 0/25). Also count job-posting citations (now 17)."
+   },
+   {
+    "action": "Publish dated case studies with verifiable outcomes (customer named with permission, what was measured, before/after numbers), and plain fact pages for what buyers asked: pricing, self-serve vs sales, cancellation, which AI engines are tracked. Use only facts Kasparro can back up. Seek independent reviews or write-ups that can be cited.",
+    "diagnostic_ids": [
+     "D2"
+    ],
+    "effort": "medium",
+    "evidence": [
+     {
+      "quote": "Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026.",
+      "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2"
+     },
+     {
+      "quote": "I couldn't find independent evidence showing that Kasparro consistently delivers measurable improvements for B2B SaaS companies specifically.",
+      "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc"
+     },
+     {
+      "quote": "If you mean **Kasparro (the AI Revenue Engine for D2C brands)**, there isn't much independent evidence yet that it's producing consistent, measurable results across a broad customer base.",
+      "response_id": "5492b420-7fa5-4de4-ab2c-6c4412e5b18d"
+     }
+    ],
+    "expected_benefit": "Gives engines something specific to cite when asked 'does it work' or 'is it legit', instead of 'no independent evidence'.",
+    "id": "R3",
+    "priority": 3,
+    "problem": "29/72 branded answers that mention Kasparro describe it negatively (ChatGPT 13/25). Most of that text is about missing independent evidence, not a concrete flaw.",
+    "title": "Publish checkable proof and clear buyer facts",
+    "uncertainty": "Medium-high. We do not know what proof Kasparro has. A company case study is still the company's own claim; independent sources take time.",
+    "validation_step": "Re-run the 25 branded prompts on all 3 engines: negative when mentioned (now 29/72) and how many negative quotes are about missing evidence (tag them as in D2's test)."
+   }
+  ],
+  "scores": {
+   "analysis_id": 1,
+   "branded": {
+    "all": {
+     "coverage": {
+      "n": 75,
+      "rate": 1.0,
+      "x": 75
+     },
+     "failed": 0,
+     "low_coverage": false,
+     "negative": {
+      "n": 75,
+      "rate": 0.387,
+      "x": 29
+     },
+     "parts": {
+      "cited": {
+       "n": 75,
+       "rate": 0.187,
+       "x": 14
+      },
+      "mentioned": {
+       "n": 75,
+       "rate": 0.96,
+       "x": 72
+      },
+      "not_negative": {
+       "n": 75,
+       "rate": 0.573,
+       "x": 43
+      },
+      "recommended": {
+       "n": 75,
+       "rate": 0.333,
+       "x": 25
+      }
+     },
+     "score": 55.5,
+     "score_range": [
+      55.5,
+      55.5
+     ],
+     "skipped": 0,
+     "succeeded": 75,
+     "total": 75,
+     "when_mentioned": {
+      "negative": {
+       "n": 72,
+       "rate": 0.403,
+       "x": 29
+      },
+      "recommended": {
+       "n": 72,
+       "rate": 0.347,
+       "x": 25
+      }
+     }
+    },
+    "by_category": {
+     "comparison": {
+      "coverage": {
+       "n": 18,
+       "rate": 1.0,
+       "x": 18
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 18,
+       "rate": 0.389,
+       "x": 7
+      },
+      "parts": {
+       "cited": {
+        "n": 18,
+        "rate": 0.222,
+        "x": 4
+       },
+       "mentioned": {
+        "n": 18,
+        "rate": 1.0,
+        "x": 18
+       },
+       "not_negative": {
+        "n": 18,
+        "rate": 0.611,
+        "x": 11
+       },
+       "recommended": {
+        "n": 18,
+        "rate": 0.278,
+        "x": 5
+       }
+      },
+      "score": 55.6,
+      "score_range": [
+       55.6,
+       55.6
+      ],
+      "skipped": 0,
+      "succeeded": 18,
+      "total": 18,
+      "when_mentioned": {
+       "negative": {
+        "n": 18,
+        "rate": 0.389,
+        "x": 7
+       },
+       "recommended": {
+        "n": 18,
+        "rate": 0.278,
+        "x": 5
+       }
+      }
+     },
+     "features_fit": {
+      "coverage": {
+       "n": 12,
+       "rate": 1.0,
+       "x": 12
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 12,
+       "rate": 0.25,
+       "x": 3
+      },
+      "parts": {
+       "cited": {
+        "n": 12,
+        "rate": 0.167,
+        "x": 2
+       },
+       "mentioned": {
+        "n": 12,
+        "rate": 1.0,
+        "x": 12
+       },
+       "not_negative": {
+        "n": 12,
+        "rate": 0.75,
+        "x": 9
+       },
+       "recommended": {
+        "n": 12,
+        "rate": 0.5,
+        "x": 6
+       }
+      },
+      "score": 66.7,
+      "score_range": [
+       66.7,
+       66.7
+      ],
+      "skipped": 0,
+      "succeeded": 12,
+      "total": 12,
+      "when_mentioned": {
+       "negative": {
+        "n": 12,
+        "rate": 0.25,
+        "x": 3
+       },
+       "recommended": {
+        "n": 12,
+        "rate": 0.5,
+        "x": 6
+       }
+      }
+     },
+     "onboarding_access": {
+      "coverage": {
+       "n": 12,
+       "rate": 1.0,
+       "x": 12
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 12,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 12,
+        "rate": 0.167,
+        "x": 2
+       },
+       "mentioned": {
+        "n": 12,
+        "rate": 0.833,
+        "x": 10
+       },
+       "not_negative": {
+        "n": 12,
+        "rate": 0.833,
+        "x": 10
+       },
+       "recommended": {
+        "n": 12,
+        "rate": 0.417,
+        "x": 5
+       }
+      },
+      "score": 60.0,
+      "score_range": [
+       60.0,
+       60.0
+      ],
+      "skipped": 0,
+      "succeeded": 12,
+      "total": 12,
+      "when_mentioned": {
+       "negative": {
+        "n": 10,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 10,
+        "rate": 0.5,
+        "x": 5
+       }
+      }
+     },
+     "pricing": {
+      "coverage": {
+       "n": 9,
+       "rate": 1.0,
+       "x": 9
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 9,
+       "rate": 0.222,
+       "x": 2
+      },
+      "parts": {
+       "cited": {
+        "n": 9,
+        "rate": 0.111,
+        "x": 1
+       },
+       "mentioned": {
+        "n": 9,
+        "rate": 1.0,
+        "x": 9
+       },
+       "not_negative": {
+        "n": 9,
+        "rate": 0.778,
+        "x": 7
+       },
+       "recommended": {
+        "n": 9,
+        "rate": 0.333,
+        "x": 3
+       }
+      },
+      "score": 60.0,
+      "score_range": [
+       60.0,
+       60.0
+      ],
+      "skipped": 0,
+      "succeeded": 9,
+      "total": 9,
+      "when_mentioned": {
+       "negative": {
+        "n": 9,
+        "rate": 0.222,
+        "x": 2
+       },
+       "recommended": {
+        "n": 9,
+        "rate": 0.333,
+        "x": 3
+       }
+      }
+     },
+     "trust_results": {
+      "coverage": {
+       "n": 24,
+       "rate": 1.0,
+       "x": 24
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 24,
+       "rate": 0.708,
+       "x": 17
+      },
+      "parts": {
+       "cited": {
+        "n": 24,
+        "rate": 0.208,
+        "x": 5
+       },
+       "mentioned": {
+        "n": 24,
+        "rate": 0.958,
+        "x": 23
+       },
+       "not_negative": {
+        "n": 24,
+        "rate": 0.25,
+        "x": 6
+       },
+       "recommended": {
+        "n": 24,
+        "rate": 0.25,
+        "x": 6
+       }
+      },
+      "score": 45.8,
+      "score_range": [
+       45.8,
+       45.8
+      ],
+      "skipped": 0,
+      "succeeded": 24,
+      "total": 24,
+      "when_mentioned": {
+       "negative": {
+        "n": 23,
+        "rate": 0.739,
+        "x": 17
+       },
+       "recommended": {
+        "n": 23,
+        "rate": 0.261,
+        "x": 6
+       }
+      }
+     }
+    },
+    "by_engine": {
+     "aimode": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.44,
+       "x": 11
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.32,
+        "x": 8
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 1.0,
+        "x": 25
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.56,
+        "x": 14
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.4,
+        "x": 10
+       }
+      },
+      "score": 60.4,
+      "score_range": [
+       60.4,
+       60.4
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 25,
+        "rate": 0.44,
+        "x": 11
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.4,
+        "x": 10
+       }
+      }
+     },
+     "chatgpt": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.52,
+       "x": 13
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.24,
+        "x": 6
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 1.0,
+        "x": 25
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.48,
+        "x": 12
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.28,
+        "x": 7
+       }
+      },
+      "score": 53.2,
+      "score_range": [
+       53.2,
+       53.2
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 25,
+        "rate": 0.52,
+        "x": 13
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.28,
+        "x": 7
+       }
+      }
+     },
+     "gemini": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.2,
+       "x": 5
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 0.88,
+        "x": 22
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.68,
+        "x": 17
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.32,
+        "x": 8
+       }
+      },
+      "score": 52.8,
+      "score_range": [
+       52.8,
+       52.8
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 22,
+        "rate": 0.227,
+        "x": 5
+       },
+       "recommended": {
+        "n": 22,
+        "rate": 0.364,
+        "x": 8
+       }
+      }
+     }
+    },
+    "same_prompt_comparison": {
+     "by_engine": {
+      "aimode": 60.4,
+      "chatgpt": 53.2,
+      "gemini": 52.8
+     },
+     "prompt_ids": [
+      "kasparro:ai_shortlisting:001",
+      "kasparro:ai_shortlisting:002",
+      "kasparro:ai_shortlisting:003",
+      "kasparro:ai_shortlisting:004",
+      "kasparro:ai_shortlisting:005",
+      "kasparro:ai_shortlisting:006",
+      "kasparro:ai_shortlisting:007",
+      "kasparro:ai_shortlisting:008",
+      "kasparro:ai_shortlisting:009",
+      "kasparro:ai_shortlisting:010",
+      "kasparro:ai_shortlisting:011",
+      "kasparro:ai_shortlisting:012",
+      "kasparro:ai_shortlisting:013",
+      "kasparro:ai_shortlisting:014",
+      "kasparro:ai_shortlisting:015",
+      "kasparro:ai_shortlisting:016",
+      "kasparro:ai_shortlisting:017",
+      "kasparro:ai_shortlisting:018",
+      "kasparro:ai_shortlisting:019",
+      "kasparro:ai_shortlisting:020",
+      "kasparro:ai_shortlisting:021",
+      "kasparro:ai_shortlisting:022",
+      "kasparro:ai_shortlisting:023",
+      "kasparro:ai_shortlisting:024",
+      "kasparro:ai_shortlisting:025"
+     ],
+     "prompts": 25
+    }
+   },
+   "citations": {
+    "by_type": {
+     "inline_hyperlink": 1518,
+     "sources_panel": 921
+    },
+    "dedup_rule": "occurrences = every citation row (inline and sources panel counted separately). unique = per response, after normalising the URL: lowercase scheme and host, drop '#fragment', drop utm_* query parameters, drop a trailing '/'. Domains drop a leading 'www.'. All citations are unverified: no cited page was opened.",
+    "kasparro_cited": {
+     "n": 150,
+     "occurrences": 21,
+     "rate": 0.093,
+     "x": 14
+    },
+    "occurrences": 2439,
+    "responses_with_citations": {
+     "n": 150,
+     "rate": 0.993,
+     "x": 149
+    },
+    "status": "unverified",
+    "top_domains": [
+     {
+      "domain": "linkedin.com",
+      "occurrences": 116,
+      "responses": 38
+     },
+     {
+      "domain": "reddit.com",
+      "occurrences": 101,
+      "responses": 32
+     },
+     {
+      "domain": "youtube.com",
+      "occurrences": 122,
+      "responses": 27
+     },
+     {
+      "domain": "medium.com",
+      "occurrences": 65,
+      "responses": 19
+     },
+     {
+      "domain": "kasparro.com",
+      "occurrences": 21,
+      "responses": 14
+     },
+     {
+      "domain": "bebee.com",
+      "occurrences": 43,
+      "responses": 13
+     },
+     {
+      "domain": "getmereferred.com",
+      "occurrences": 32,
+      "responses": 13
+     },
+     {
+      "domain": "arxiv.org",
+      "occurrences": 19,
+      "responses": 12
+     },
+     {
+      "domain": "instagram.com",
+      "occurrences": 17,
+      "responses": 12
+     },
+     {
+      "domain": "dageno.ai",
+      "occurrences": 32,
+      "responses": 11
+     }
+    ],
+    "unique_domains": 769,
+    "unique_urls_overall": 1309,
+    "unique_urls_per_response_summed": 1535
+   },
+   "competitors": [
+    {
+     "branded": 8,
+     "name": "Profound",
+     "total": 23,
+     "unbranded": 15
+    },
+    {
+     "branded": 4,
+     "name": "Peec AI",
+     "total": 20,
+     "unbranded": 16
+    },
+    {
+     "branded": 3,
+     "name": "Otterly",
+     "total": 17,
+     "unbranded": 14
+    },
+    {
+     "branded": 1,
+     "name": "Semrush",
+     "total": 7,
+     "unbranded": 6
+    },
+    {
+     "branded": 0,
+     "name": "Ahrefs",
+     "total": 6,
+     "unbranded": 6
+    },
+    {
+     "branded": 2,
+     "name": "AthenaHQ",
+     "total": 5,
+     "unbranded": 3
+    },
+    {
+     "branded": 4,
+     "name": "Dageno AI",
+     "total": 5,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "SE Ranking",
+     "total": 4,
+     "unbranded": 4
+    },
+    {
+     "branded": 0,
+     "name": "Ahrefs Brand Radar",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 0,
+     "name": "Geoptie",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 0,
+     "name": "HubSpot AEO",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 0,
+     "name": "Omnia",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 1,
+     "name": "Scrunch AI",
+     "total": 3,
+     "unbranded": 2
+    },
+    {
+     "branded": 0,
+     "name": "Semrush AI Visibility Toolkit",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 0,
+     "name": "ZipTie",
+     "total": 3,
+     "unbranded": 3
+    },
+    {
+     "branded": 0,
+     "name": "Ahrefs Brand Radar AI",
+     "total": 2,
+     "unbranded": 2
+    },
+    {
+     "branded": 1,
+     "name": "AirOps",
+     "total": 2,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Clari",
+     "total": 2,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Conductor",
+     "total": 2,
+     "unbranded": 2
+    },
+    {
+     "branded": 2,
+     "name": "Goodie AI",
+     "total": 2,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "HubSpot",
+     "total": 2,
+     "unbranded": 1
+    },
+    {
+     "branded": 2,
+     "name": "Kaspr",
+     "total": 2,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "LLM optimization",
+     "total": 2,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Scrunch",
+     "total": 2,
+     "unbranded": 2
+    },
+    {
+     "branded": 0,
+     "name": "Semrush (AI Visibility Toolkit)",
+     "total": 2,
+     "unbranded": 2
+    },
+    {
+     "branded": 0,
+     "name": "AI Sightline",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "AI-Netra",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Adobe Brand Visibility",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Alhena AI",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Analyze AI",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "AnswerLift",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Anthropic",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Anthropic (Claude)",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Apollo",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Areebi",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Arize Phoenix",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Automated evaluation ('LLM-as-a-judge')",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Ayzeo",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Beamtrace",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Benchmark datasets",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Bifrost",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Brainlabs",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Braintrust",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Brand Armor AI",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Brand24",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Chosenly",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Clairon",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Claude Opus 4.6",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "CogNerd",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Cognism",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "CoreMention",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Danzo.ai",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Dedicated GEO (Generative Engine Optimization) Platforms",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "DeepEval",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Emberos",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Empact",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Fathom",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Fireflies.ai",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Forbes",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Forzeo",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Frase",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "G2/Capterra",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "GPT",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Gauge",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Genee Tech",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "GetCito",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Gong",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Goodie",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Google AI",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Google AI Overviews",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Google AI Studio",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Google Gemini",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "GovernMy.ai",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Gracker.ai",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "GrackerAI",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Gradaris",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Helicone",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "HubSpot AEO (and free AEO Grader)",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "HubSpot AEO Grader",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "HubSpot AEO Tool",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Human preference collection",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Industry blogs",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Jasper AI",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Keyword.com",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "LLM Pulse",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "LLM-as-a-Judge Frameworks",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "LLMReach",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Langfuse",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Lantern",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "LinkedIn",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "LiteLLM",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "MLflow Evaluation",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "MarketScale",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Maxim AI",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Meridian",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Metricus",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Microsoft Clarity",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "MindStudio",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Multi-dimensional evaluation",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "NBound Marketing",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Okara AI",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Pairwise comparisons",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Peec AI & Otterly.ai",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Perplexity AI",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Pro/Scale",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "PromptLayer",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Promptfoo",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Quattr GEO",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Qvery",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Ragas",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Rank Math AI Visibility",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Rankr",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "RanksPro",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Read.ai",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Regression test suites",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Replit",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Review sites",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Riff Analytics & Rankscale",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "SE Ranking (AI Visibility Tracker)",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "SE Visible",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "SEOptimer",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Salesforce",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Siftly",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Squarespace",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Strajist.ai",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Superlines",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Surferstack",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Testsigma",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Third-Party Validation",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Topify GEO Platform",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "TripAdvisor",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Trysight",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Veza Digital",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "WisprFlow",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 1,
+     "name": "Wiza",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "Writesonic",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "Writesonic GEO Suite",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "Yaps",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "You.com",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "ZipTie.dev",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "aigrow.gg",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "audit.filter.agency",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 0,
+     "name": "iPullRank",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "industry blogs",
+     "total": 1,
+     "unbranded": 0
+    },
+    {
+     "branded": 0,
+     "name": "seoClarity",
+     "total": 1,
+     "unbranded": 1
+    },
+    {
+     "branded": 1,
+     "name": "similar AI diagnostic service providers",
+     "total": 1,
+     "unbranded": 0
+    }
+   ],
+   "llm_mode": "local",
+   "method": {
+    "points": {
+     "cited": 10,
+     "mentioned": 30,
+     "not_negative": 20,
+     "recommended": 40
+    },
+    "rules": [
+     "not_negative is given only when Kasparro is mentioned and not negatively characterised",
+     "recommended and negative can only be true when Kasparro is mentioned",
+     "group score = average points over succeeded responses only (failed and skipped are not zeros)",
+     "score_range = [failed counted as 0, failed counted as 100] over succeeded + failed",
+     "low_coverage = fewer than 80% of a group's responses succeeded",
+     "branded and unbranded prompts are never combined into one number"
+    ],
+    "scale": "0-100 points per successfully analysed response",
+    "version": "score-v1"
+   },
+   "model": "qwen2.5:7b",
+   "per_prompt": [
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "b40168e8-acf4-4430-b22d-8c484fab846f",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:001",
+     "text": "does kasparro actually work for B2B SaaS companies trying to get recommended by chatgpt?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "57210f17-4436-4356-9f0f-3f6434ef0a6d",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "f5109b67-a854-4fa0-a05f-e9a88b5b3edb",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "6b6e79d3-a582-4d23-8fa6-714c9e982af2",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:002",
+     "text": "can kasparro help an enterprise software brand show up more in perplexity answers?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "449f8530-b47a-411c-9bec-1b5b6e0552cb",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "0f217f49-ee02-44ea-853d-61fbcc7a9895",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "505cb278-6145-4408-95d1-f42cdce2c695",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:003",
+     "text": "is kasparro better than profound for tracking how Claude recommends B2B software?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "67b714d5-bf90-42c2-a360-1d1d3149c1f8",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "1abaa05d-1d41-4164-b554-1fc1cba01d79",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "4abad2ab-5d73-4104-bc45-1d7a50c8f244",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:004",
+     "text": "what if kasparro doesn't increase our ai visibility at all after 14 days?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 70,
+       "position": null,
+       "recommended": true,
+       "response_id": "b7768287-1be1-4089-bbbd-c0908289b0b9",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 40,
+       "position": null,
+       "recommended": false,
+       "response_id": "08f81acc-0824-4e3a-a5d5-58446e2a6a90",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "44a32b81-7166-44dc-bac3-8cd2ae40da73",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:005",
+     "text": "does kasparro actually work or is ai visibility tracking just a gimmick?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "8f761923-2485-4a8f-817a-563bc1396fbf",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "fa0dff8e-b96c-49b0-bcf3-0d410451bdf4",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "9630ab41-2e94-4cfc-b22f-478264263a56",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:006",
+     "text": "does kasparro track brand visibility on both chatgpt and copilot?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "90b3eb79-cdf8-4fdb-ac9b-43089065a092",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 60,
+       "position": null,
+       "recommended": false,
+       "response_id": "2fef505c-f845-43d3-aee0-8926d21bc31e",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "c937b823-bb09-4fcc-ab79-449d54f906d2",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:007",
+     "text": "what exactly does the kasparro four module audit score?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "9da8423e-08dc-4067-8f25-5ef142a5201c",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "71ec5309-af52-4071-af21-bd282ce41cce",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "6b68f8f8-5ecd-466c-9664-801227a9167c",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:008",
+     "text": "how does kasparro's audit system compare to otterly ai's features?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "58034df8-0d67-4878-827a-376afa1efc2b",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 60,
+       "position": null,
+       "recommended": false,
+       "response_id": "4b5b2098-bdb6-4ff7-a1a2-2587f210f444",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "ead5da6c-cd59-4bad-827e-49ae12f4e232",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:009",
+     "text": "does kasparro rely on prompt hacks or prompt engineering tricks to boost visibility?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "95f393e4-e371-4acf-8c6e-1a74bf65c045",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "9074ca1a-a68c-4c1d-9473-e0e9748eda2e",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "95a7db89-bcd6-49fa-bd03-ab098605fcc1",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:010",
+     "text": "is kasparro missing any major ai search engines like Gemini or Claude?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "721ceff5-a4e3-439b-9b56-a8df34f6551b",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 70,
+       "position": null,
+       "recommended": true,
+       "response_id": "847af3d3-88c3-4cad-ad9f-a1a4d6889052",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "1fda2a12-a2df-4ab1-abd5-17b7746bc833",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:011",
+     "text": "is kasparro a legit platform for tracking ai recommendations?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 40,
+       "position": null,
+       "recommended": false,
+       "response_id": "05bdabb0-f779-42bd-9a31-f33b53274e32",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "d5043498-a516-463e-b97b-5fc917f5e26a",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "861a9955-69ab-46ed-927c-fd336bc37893",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:012",
+     "text": "what do real enterprise users say about kasparro's ai revenue diagnostic?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "35b7cd2b-eef2-4767-84a7-c9e6aff8fcf5",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 40,
+       "position": null,
+       "recommended": false,
+       "response_id": "65d83d99-a531-4149-bdc6-5dff9284e6f4",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": 2,
+       "recommended": false,
+       "response_id": "729e6864-9290-4336-a32e-b9a27ce150a6",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:013",
+     "text": "who is more trustworthy for ai brand tracking kasparro or athenahq?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "537a5dad-1af6-48c5-92ee-37ec68ed22d7",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "5492b420-7fa5-4de4-ab2c-6c4412e5b18d",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:014",
+     "text": "has anyone actually gotten results from kasparro or is it all hype?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "4ece3df1-8779-4853-89be-92f5a0100736",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "a46bc527-5558-40b7-a5b8-f1c22435dd03",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "f3b89676-4b0a-4343-a080-2fea2a3508cf",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:015",
+     "text": "is kasparro safe to use or does it risk violating LLM terms of service?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "0f7ae466-5a77-42ce-9018-37f243f7d886",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "bc213889-4850-4ae2-bf8e-af1159ff6f9c",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "d748ed0e-2cc5-4fc7-9a94-64811235a4c9",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:016",
+     "text": "how much does kasparro cost for a 14 day ai revenue diagnostic?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "0701bd6b-a5c3-4999-9c2a-51145cab15df",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": 3,
+       "recommended": false,
+       "response_id": "c3b978b0-d181-4941-8d88-241cab857499",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": 1,
+       "recommended": false,
+       "response_id": "b064461f-7855-477d-bded-95dbb6e9562c",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:017",
+     "text": "is kasparro worth the money compared to peec ai?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "6ba5d428-1b45-4c6d-9263-73129d059b01",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": true,
+       "points": 30,
+       "position": null,
+       "recommended": false,
+       "response_id": "1d2dc007-0757-480d-a086-6b6e2e13c463",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "20958c20-9648-4b12-bbb6-efbbff33d0fe",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:018",
+     "text": "is kasparro overpriced for B2B SaaS startups?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "51366d92-2978-4654-b6fb-1f5dca180980",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "953e6675-8bec-4fe1-b53a-2fbcc9df00de",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "b87e2b44-032c-40d8-92e5-a8223212d3d4",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:019",
+     "text": "does kasparro lock you into expensive monthly retainers?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "4933e11e-0697-4246-bdda-45a160528a2a",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "9aefbc5a-d270-42d8-b07f-1945b2e98c76",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "66854c1c-447b-4eae-9601-d1a5895285e2",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:020",
+     "text": "how long does setup take for kasparro's ai revenue audit?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "1b58c598-f4b9-43f1-b899-2a25d7ddd9cb",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "9ef923c0-987a-4df8-96f4-6072f6bf16ee",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "da579a76-82ed-4c77-927d-6af8329d0a3e",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:021",
+     "text": "is onboarding with kasparro faster than dageno ai?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "7a570f6f-eea5-4aba-b499-711f7cd1a1ba",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "511317a1-af77-43f1-90a2-cfa92f812676",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:022",
+     "text": "how hard is it to cancel kasparro if we don't see results?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "e3969fc6-5f7f-4994-a152-d9072be6f173",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "b8c771d4-1394-47bf-b185-ef294ef6d5f6",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "8c3f3f3f-1bc5-4cf3-a099-7cccfda9993a",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:023",
+     "text": "can US and India based brands sign up for kasparro today?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": true,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 100,
+       "position": null,
+       "recommended": true,
+       "response_id": "4b70d3c9-26a1-46ab-94b7-fc4c02857518",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "533fc340-e610-410f-9cb0-40c064506ad1",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "1cf6f5bc-7a29-4128-b51d-aa56891b08f4",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:024",
+     "text": "does kasparro support enterprise brands outside the US like profound does?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 50,
+       "position": null,
+       "recommended": false,
+       "response_id": "ffdd37a9-6c48-4dff-8abd-c455bc9580b2",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": true,
+       "negative": false,
+       "points": 90,
+       "position": null,
+       "recommended": true,
+       "response_id": "42e35106-67bf-48c8-aaca-4e8ccf910e77",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "136b8240-008c-46ff-b744-592c4d859e98",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": true,
+     "prompt_id": "kasparro:ai_shortlisting:025",
+     "text": "is kasparro available for self serve or do you have to talk to sales?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "0e2c8f07-c483-493d-a9fc-467efc857faa",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:026",
+     "text": "how do B2B SaaS brands track if chatgpt is recommending their software?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "4334ee7a-6315-4312-b0ca-0a58bcd6270c",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "ee8878c5-69b1-41c4-82a0-13a83c237f2f",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "874f97b5-f122-4ac0-b53c-c35ddc82291d",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:027",
+     "text": "what software tools measure brand appearance across AI search engines?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "847be62a-f50a-4b19-ab6c-43965fbae5ed",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "91489c39-b122-4ac6-9702-f69600360658",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "174932c6-7662-448c-8fb7-3217096c51ff",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:028",
+     "text": "are there good alternatives to manual prompts for checking AI engine recommendations?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "bc011973-55ba-4942-ae90-4f09849a221d",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "3d06d4f2-061d-44e4-9a7b-0628a777fb00",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "68d96336-d387-4bac-9662-8596e99dd6a3",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:029",
+     "text": "do AI visibility platforms actually help or are answer engines too unpredictable?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "af2462e6-b4a0-47b2-a540-a374b22e0d5f",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "049203e7-be85-4b73-abb7-3e1f17a6273c",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "00f943a2-5355-4205-a6e0-a3ce5de97c51",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:030",
+     "text": "is tracking AI engine recommendations worth it for small software companies?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "f2081176-45c1-4b0b-afec-0f0a65110fc6",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "470803a8-9759-461f-b1e3-8ecf10a6e052",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "72e3c05f-de18-4cc2-8e24-96ffb2e3d593",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:031",
+     "text": "what kind of tool should a B2B SaaS brand use to show up more in Claude and Perplexity?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "d37e9604-d0ae-4021-a73f-02fd822e8d01",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "0eb89a67-4548-4810-ba1c-1881a919823d",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "02c5ee8d-0ffe-4940-bf93-5793e7b01528",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:032",
+     "text": "how can enterprise software platforms fix poor visibility in ChatGPT answers?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "bb1301e0-c91a-4d8a-a954-f9fecd87a4d5",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "c5344e96-4a42-4f17-818b-774beaef5ed7",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "89625a58-1069-4b0b-a3eb-1b979d9ee15f",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:033",
+     "text": "what works better for getting cited by AI engines traditional SEO or dedicated AI optimization tools?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "b9042e76-dd8d-4ecb-8dae-bdd37ef04754",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "fab48e6e-a61b-43d2-ac30-40fcb0716d48",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "a49eba68-bda8-4278-95ac-4334391bc7f3",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:034",
+     "text": "can software brands actually influence AI recommendation frequencies without spamming?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "c71540a7-7010-4324-ae6d-036c3f8898ce",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "69e826c2-570d-4213-ba60-799ea925d106",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "1c2f6b84-50ad-4192-a20e-8b000e3aa7e1",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:035",
+     "text": "why isn't my software product showing up when buyers ask ChatGPT for recommendations?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "b9f436b9-af39-486a-bbbe-d4692e55d6fb",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "13c261d3-f05a-444f-81d6-69e769af59cf",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "0f38b477-9f3c-44a8-9d10-0b6016db6150",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:036",
+     "text": "what is the best software for measuring brand inclusion in AI search answers?"
+    },
+    {
+     "category": "discovery",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "0697376e-335d-45ef-a593-bc12c5e1ecf3",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "3d2402de-0de4-4965-bcc5-9c077ddddcd2",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "11010066-8ed2-4741-856e-9259ae1a377b",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:037",
+     "text": "what tools do growth marketers recommend for AI answer engine optimization?"
+    },
+    {
+     "category": "comparison",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "89babd5f-9a94-4d2c-b2ab-4b7c97345587",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "5c9aca1f-7a50-476c-98f7-394a9c40bbc3",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "c73aba11-2772-42d0-a20f-17f015969a31",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:038",
+     "text": "what do people prefer between profound and other AI visibility tools?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "e6415205-604e-4fae-988e-5fa13dfb8002",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "4f391c44-7e1a-4d6b-96de-302bc426dfbe",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "14a5d324-5cc3-4554-a8ae-9643d5fafa73",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:039",
+     "text": "are any AI visibility platforms actually effective or do they all make empty promises?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "af07e6ca-910a-4aad-90ce-5efa80e1b2a1",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "1b626742-8afd-4a92-9ba8-8b42fcbfef00",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "e2bb9e59-578d-474c-b7e1-ee8c29b36d90",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:040",
+     "text": "why are people skeptical about AI recommendation optimization tools?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "7ed900ae-a524-4c47-969c-2c43b2b0b620",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "40d036db-4c8f-4823-af6f-0a6eaf1fcb8b",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "bd13800f-700c-405a-ab1e-7f37f24669e7",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:041",
+     "text": "what features should I look for in an AI visibility audit platform?"
+    },
+    {
+     "category": "features_fit",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "db36a033-8f83-47bb-a0ba-8c35539f8aed",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "9a8ef397-694c-465a-81d4-09df1bc1342e",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "2fb1175e-1a18-4fe1-b41b-a75004877ab4",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:042",
+     "text": "do AI revenue platforms offer audit reports or just keyword tracking?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "1a63691b-8c9f-4e1e-ae3b-652f85056e89",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "8f2b7e98-e566-47c8-bf5b-35659ddec99e",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "3f18cf56-f064-4700-ac81-f5541283972b",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:043",
+     "text": "do AI tracking tools require complex API integrations or setup fees?"
+    },
+    {
+     "category": "trust_results",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "003061a9-6cdd-45a0-89c4-9a139020da4a",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "8c4a22e7-71a4-4a71-bc43-9a03f5d43480",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "8ceb3779-0473-45b0-b935-3cb8fdf6f479",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:044",
+     "text": "do AI brand platforms just use basic prompt hacks that stop working?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "62da805a-1460-43b4-80b9-3bafab5f7941",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "f5100351-d640-4d2a-ad89-968dfa508b01",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "4b827e87-9cf6-4188-98b9-937d5678a8e1",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:045",
+     "text": "how much do enterprise AI visibility and audit platforms typically cost?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "42b3f554-e490-43a3-bfcf-08be6cb61261",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "34f5321e-242b-495c-9c68-98f3b297dcb1",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "c66bc7a5-3144-48a3-9a50-0a30523c0bc1",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:046",
+     "text": "are paid AI search tracking tools better value than building an internal tracker?"
+    },
+    {
+     "category": "pricing",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "c7e908af-8c70-469d-8330-5080cc50741e",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "930518b9-de1e-445f-9f5d-68c3986e7836",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "b0154a95-8a6c-45fd-a3b6-5ab99872b33a",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:047",
+     "text": "are high retainer fees common for AI search optimization platforms?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "d8e9834b-2520-41f3-a18f-95735da3a66f",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "86af832e-ca04-4b47-b4d5-ff9dd62f2994",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "660dd26e-bada-40be-b3fc-8f04f4f839e1",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:048",
+     "text": "how fast can a B2B SaaS company get an AI revenue diagnostic report?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "016fc85b-120b-46fe-958a-53724ad55363",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "53414465-6ef7-4fb2-985f-7586a286e801",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "612ccde7-636c-4978-ae2b-9a55fcdc455a",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:049",
+     "text": "is it easier to set up a turnkey AI audit or hire an agency?"
+    },
+    {
+     "category": "onboarding_access",
+     "engines": {
+      "aimode": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "17748847-e19d-4e05-97d1-bcc616cd758f",
+       "status": "succeeded"
+      },
+      "chatgpt": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "e4be4da9-d2cd-40ed-876a-185c4cfbac71",
+       "status": "succeeded"
+      },
+      "gemini": {
+       "cited": false,
+       "error_code": null,
+       "mentioned": false,
+       "negative": false,
+       "points": 0,
+       "position": null,
+       "recommended": false,
+       "response_id": "37277abf-79bb-4adf-9213-6bcfbe1c6fbf",
+       "status": "succeeded"
+      }
+     },
+     "is_branded": false,
+     "prompt_id": "kasparro:ai_shortlisting:050",
+     "text": "what usually goes wrong during onboarding with AI visibility tools?"
+    }
+   ],
+   "run_counts": {
+    "coverage": {
+     "n": 150,
+     "rate": 1.0,
+     "x": 150
+    },
+    "failed": 0,
+    "low_coverage": false,
+    "skipped": 0,
+    "succeeded": 150,
+    "total": 150
+   },
+   "unbranded": {
+    "all": {
+     "coverage": {
+      "n": 75,
+      "rate": 1.0,
+      "x": 75
+     },
+     "failed": 0,
+     "low_coverage": false,
+     "negative": {
+      "n": 75,
+      "rate": 0.0,
+      "x": 0
+     },
+     "parts": {
+      "cited": {
+       "n": 75,
+       "rate": 0.0,
+       "x": 0
+      },
+      "mentioned": {
+       "n": 75,
+       "rate": 0.0,
+       "x": 0
+      },
+      "not_negative": {
+       "n": 75,
+       "rate": 0.0,
+       "x": 0
+      },
+      "recommended": {
+       "n": 75,
+       "rate": 0.0,
+       "x": 0
+      }
+     },
+     "score": 0.0,
+     "score_range": [
+      0.0,
+      0.0
+     ],
+     "skipped": 0,
+     "succeeded": 75,
+     "total": 75,
+     "when_mentioned": {
+      "negative": {
+       "n": 0,
+       "rate": null,
+       "x": 0
+      },
+      "recommended": {
+       "n": 0,
+       "rate": null,
+       "x": 0
+      }
+     }
+    },
+    "by_category": {
+     "comparison": {
+      "coverage": {
+       "n": 3,
+       "rate": 1.0,
+       "x": 3
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 3,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 3,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 3,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 3,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 3,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 3,
+      "total": 3,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "discovery": {
+      "coverage": {
+       "n": 18,
+       "rate": 1.0,
+       "x": 18
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 18,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 18,
+      "total": 18,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "features_fit": {
+      "coverage": {
+       "n": 18,
+       "rate": 1.0,
+       "x": 18
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 18,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 18,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 18,
+      "total": 18,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "onboarding_access": {
+      "coverage": {
+       "n": 9,
+       "rate": 1.0,
+       "x": 9
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 9,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 9,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 9,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 9,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 9,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 9,
+      "total": 9,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "pricing": {
+      "coverage": {
+       "n": 12,
+       "rate": 1.0,
+       "x": 12
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 12,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 12,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 12,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 12,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 12,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 12,
+      "total": 12,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "trust_results": {
+      "coverage": {
+       "n": 15,
+       "rate": 1.0,
+       "x": 15
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 15,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 15,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 15,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 15,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 15,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 15,
+      "total": 15,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     }
+    },
+    "by_engine": {
+     "aimode": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "chatgpt": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     },
+     "gemini": {
+      "coverage": {
+       "n": 25,
+       "rate": 1.0,
+       "x": 25
+      },
+      "failed": 0,
+      "low_coverage": false,
+      "negative": {
+       "n": 25,
+       "rate": 0.0,
+       "x": 0
+      },
+      "parts": {
+       "cited": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "mentioned": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "not_negative": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       },
+       "recommended": {
+        "n": 25,
+        "rate": 0.0,
+        "x": 0
+       }
+      },
+      "score": 0.0,
+      "score_range": [
+       0.0,
+       0.0
+      ],
+      "skipped": 0,
+      "succeeded": 25,
+      "total": 25,
+      "when_mentioned": {
+       "negative": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       },
+       "recommended": {
+        "n": 0,
+        "rate": null,
+        "x": 0
+       }
+      }
+     }
+    },
+    "same_prompt_comparison": {
+     "by_engine": {
+      "aimode": 0.0,
+      "chatgpt": 0.0,
+      "gemini": 0.0
+     },
+     "prompt_ids": [
+      "kasparro:ai_shortlisting:026",
+      "kasparro:ai_shortlisting:027",
+      "kasparro:ai_shortlisting:028",
+      "kasparro:ai_shortlisting:029",
+      "kasparro:ai_shortlisting:030",
+      "kasparro:ai_shortlisting:031",
+      "kasparro:ai_shortlisting:032",
+      "kasparro:ai_shortlisting:033",
+      "kasparro:ai_shortlisting:034",
+      "kasparro:ai_shortlisting:035",
+      "kasparro:ai_shortlisting:036",
+      "kasparro:ai_shortlisting:037",
+      "kasparro:ai_shortlisting:038",
+      "kasparro:ai_shortlisting:039",
+      "kasparro:ai_shortlisting:040",
+      "kasparro:ai_shortlisting:041",
+      "kasparro:ai_shortlisting:042",
+      "kasparro:ai_shortlisting:043",
+      "kasparro:ai_shortlisting:044",
+      "kasparro:ai_shortlisting:045",
+      "kasparro:ai_shortlisting:046",
+      "kasparro:ai_shortlisting:047",
+      "kasparro:ai_shortlisting:048",
+      "kasparro:ai_shortlisting:049",
+      "kasparro:ai_shortlisting:050"
+     ],
+     "prompts": 25
+    }
+   },
+   "versions": {
+    "category": "cat-v1",
+    "prompt": "classify-v3",
+    "scoring": "score-v1"
+   }
+  }
+ }
+}

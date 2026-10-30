@@ -21,3 +21,12 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 14:55 | Pre-run review: separate eval replay folder, Ollama preflight (503), context-size check. 140 tests pass. |
 | 30 Oct | 15:47 | Full local run 1: 147/150 in 24 min. Diagnosed 3 failures → fixes F5 (quote punctuation) and F6 (retry loop, error text). 145 tests pass. |
 | 30 Oct | 17:40 | Full local run 2 (final code): 150/150 in 23 min, F6 retry recovered 2 answers. Replay reproduces it exactly. Eval re-run locally. |
+| 30 Oct | 18:00 | Phase 08 done: report from evidence, reject → edit → approve → export demo, `out/analysis.json`, README, DECISIONS. Fresh clone + README in replay: setup to export in under 2 min. |
+
+**Total: about 6 h 00 min** (12:00–18:00, wall clock). This includes about 50 min of waiting on the two full
+local model runs and the local eval runs.
+
+**Unfinished / known gaps**
+- Eval replay: the tuning split differs on c02, because recordings are shared between splits. The final split replays exactly.
+- Review expiry and parallel-reviewer handling are described in DECISIONS.md only.
+- Cited pages were never opened (all citations unverified). There is no resume after a crashed run.

@@ -1,0 +1,170 @@
+{
+ "diagnostics": [
+  {
+   "id": "D1",
+   "title": "Unbranded discovery: is Kasparro included?",
+   "pattern": "Kasparro is named in 0/75 succeeded unbranded answers (AI Mode 0/25, ChatGPT 0/25, Gemini 0/25; 0 failed, 0 skipped). Most-named alternatives in unbranded answers: Profound (15), Peec AI (16), Otterly (14), Semrush (6), Ahrefs (6).",
+   "explanation": "Hypothesis, not proven: (a) the 25 unbranded prompts ask about B2B SaaS and software brands, while the brand brief says Kasparro's website focuses on D2C brands and product catalogs, so engines may not see Kasparro as a fit; one ChatGPT answer says it is 'aimed much more at retail and CPG brands'. (b) The sources these answers cite (reddit.com 20, linkedin.com 20, youtube.com 19, medium.com 13 of 75 responses) may simply not name Kasparro, while competitors are covered there.",
+   "test_evidence": "Open the comparison and list pages cited by the 75 unbranded answers (citations are unverified today) and count how many name Kasparro vs Profound, Peec AI and Otterly. Add a few D2C/commerce unbranded prompts: if Kasparro appears there but not in the B2B SaaS prompts, (a) is supported.",
+   "evidence": [
+    {
+     "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a",
+     "quote": "- **CoreMention:** Monitors AI visibility across ChatGPT, Perplexity, Claude, and Gemini to track brand mentions, competitor comparisons, and source tracking."
+    },
+    {
+     "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d",
+     "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpot’s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:"
+    },
+    {
+     "response_id": "ee8878c5-69b1-41c4-82a0-13a83c237f2f",
+     "quote": "| [Profound](https://www.tryprofound.com/) | Enterprise brands | AI share of voice, prompt monitoring, citations, competitor analysis |"
+    },
+    {
+     "response_id": "4334ee7a-6315-4312-b0ca-0a58bcd6270c",
+     "quote": "- **Semrush (AI Visibility Toolkit):** Offers specialized tools to track brand mentions, share of voice, and sentiment across AI engines like ChatGPT and Google SGE.[](https://saastock.com/blog/essential-tools-for-monitoring-your-brand-in-ai-search) [[1]](https://saastock.com/blog/essential-tools-for-monitoring-your-brand-in-ai-search)"
+    }
+   ]
+  },
+  {
+   "id": "D2",
+   "title": "Branded answers: how Kasparro is described",
+   "pattern": "On branded prompts Kasparro is mentioned in 72/75 succeeded answers. Of the answers that mention it, 29/72 describe it negatively and 25/72 recommend it (AI Mode negative 11/25, recommended 10/25, ChatGPT negative 13/25, recommended 7/25, Gemini negative 5/22, recommended 8/22; 0 failed).",
+   "explanation": "Hypothesis: most negative text is about missing independent proof or low recognition, not about a concrete flaw (see quotes). Engines seem to find little third-party evidence about Kasparro and say so. Answers that cite kasparro.com lean positive (AI Mode: 8 such answers, 7 recommend), but this is a correlation in one snapshot, not a cause.",
+   "test_evidence": "Read all 29 negative quotes and tag each as 'missing evidence / low recognition' vs 'concrete criticism'. Check whether independent reviews or case studies about Kasparro exist. Compare negative rates in answers with vs without a kasparro.com citation on a repeat capture.",
+   "evidence": [
+    {
+     "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2",
+     "quote": "Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026."
+    },
+    {
+     "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc",
+     "quote": "I couldn't find independent evidence showing that Kasparro consistently delivers measurable improvements for B2B SaaS companies specifically."
+    },
+    {
+     "response_id": "5492b420-7fa5-4de4-ab2c-6c4412e5b18d",
+     "quote": "If you mean **Kasparro (the AI Revenue Engine for D2C brands)**, there isn't much independent evidence yet that it's producing consistent, measurable results across a broad customer base."
+    },
+    {
+     "response_id": "847af3d3-88c3-4cad-ad9f-a1a4d6889052",
+     "quote": "I would also treat it as an emerging startup rather than an established market leader"
+    },
+    {
+     "response_id": "6b6e79d3-a582-4d23-8fa6-714c9e982af2",
+     "quote": "Yes, **Kasparro** is designed specifically for this use case."
+    }
+   ]
+  },
+  {
+   "id": "D3",
+   "title": "Engines differ, and Gemini mixes Kasparro up with Kaspr",
+   "pattern": "On the 25 branded prompts that all three engines answered successfully, the average score is AI Mode 60.4, ChatGPT 53.2, Gemini 52.8 (gap 7.6 points). Gemini answered about a different product, 'Kaspr' (a B2B contact data tool), in 3/25 branded answers; these are the 3 branded answers with no Kasparro mention. ChatGPT also doubted the name in some answers. Source counts (SQL over the citations table, all unverified): kasparro.com is cited in AI Mode 8/50, ChatGPT 6/50, Gemini 0/50 responses. Job-posting pages with 'kasparro' in the URL (bebee.com, getmereferred.com, iimjobs.com) are cited in 17 Gemini and 6 AI Mode branded answers.",
+   "explanation": "Hypothesis: Gemini has no clear first-party source for Kasparro (it never cites kasparro.com and leans on job postings and LinkedIn), so with a similar, better-known name it sometimes picks Kaspr. AI Mode cites kasparro.com most often and scores highest on the same prompts.",
+   "test_evidence": "Check kasparro.com crawl access for Google and OpenAI search bots and whether the homepage states in text what Kasparro is. Re-ask the 3 Kaspr prompts on Gemini on a new capture; check whether the answers that cite job postings describe Kasparro from those postings.",
+   "evidence": [
+    {
+     "response_id": "136b8240-008c-46ff-b744-592c4d859e98",
+     "quote": "Kaspr is primarily available as a **self-serve platform**."
+    },
+    {
+     "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930",
+     "quote": "Whether **Kaspr** delivers actual results or is just marketing hype depends heavily on **where you are prospecting** and **what you expect the tool to do**."
+    },
+    {
+     "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9",
+     "quote": "Canceling **Kaspr** (assuming you mean the B2B contact data and LinkedIn prospecting tool) is **technically straightforward** and can be handled directly through your dashboard, but you have to watch out for **strict notice periods** to avoid getting billed for another cycle.[fundraiseinsider.com](https://fundraiseinsider.com/blog/kaspr-alternatives/#:~:text=Kaspr%20requires%20advance%20cancellation%20notice%20before%20renewal,decisions%20across%20most%20opaque-billing%20B2B%20data%20platforms.)"
+    },
+    {
+     "response_id": "a46bc527-5558-40b7-a5b8-f1c22435dd03",
+     "quote": "If you're referring to the AI tool called **Kasparro**, I couldn't find a well-established service by that exact name, so I can't make a definitive statement about its practices."
+    },
+    {
+     "response_id": "0f217f49-ee02-44ea-853d-61fbcc7a9895",
+     "quote": "Kasparro (assuming you mean the AI visibility platform rather than another product with a similar name) is aimed much more at **retail and CPG brands**. Its metrics revolve around AI shopping recommendations, 'Brand Inclusion Rate,' 'Share of Invisible Shelf,' and agentic commerce rather than B2B software evaluation."
+    }
+   ]
+  }
+ ],
+ "remedies": [
+  {
+   "id": "R1",
+   "priority": 1,
+   "effort": "medium",
+   "diagnostic_ids": [
+    "D1"
+   ],
+   "title": "Find out why Kasparro is missing from unbranded answers, then fill the source gap",
+   "problem": "Kasparro is named in 0/75 succeeded unbranded answers, while Peec AI (16), Profound (15) and Otterly (14) are named often. This is the main discovery problem: buyers who do not already know the name never see it.",
+   "evidence": [
+    {
+     "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a",
+     "quote": "- **CoreMention:** Monitors AI visibility across ChatGPT, Perplexity, Claude, and Gemini to track brand mentions, competitor comparisons, and source tracking."
+    },
+    {
+     "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d",
+     "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpot’s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:"
+    }
+   ],
+   "action": "Investigation first (about 1 day): open the comparison/list pages cited by the unbranded answers and record which brands each names. Then (1) decide with the growth lead whether Kasparro targets B2B SaaS questions at all, given its D2C focus; (2) if yes, publish a factual page on kasparro.com that answers these questions using only claims Kasparro can support, and ask authors of the cited comparison pages for a fact check or inclusion. No paid placements, no invented claims.",
+   "expected_benefit": "Tells us whether the gap is about fit (wrong audience) or coverage (missing from sources). If coverage, more sources that describe Kasparro make unbranded inclusion possible. No ranking or inclusion gain is promised.",
+   "uncertainty": "High. The cause of 0/75 is unknown; this is one capture per prompt and engine; citations were not opened; engines may not use the pages we change.",
+   "validation_step": "Re-run the same 25 unbranded prompts on the same 3 engines with the same capture setup. Compare 'mentioned' (now 0/75, per engine 0/25) and the number of cited pages that name Kasparro. Repeat the capture at least twice before calling it a change."
+  },
+  {
+   "id": "R2",
+   "priority": 2,
+   "effort": "low",
+   "diagnostic_ids": [
+    "D3"
+   ],
+   "title": "Make Kasparro's identity clear and easy to find on its own site",
+   "problem": "Gemini answered about 'Kaspr' in 3/25 branded answers and cites kasparro.com in 0/50 responses, while it cites Kasparro job postings in 17 branded answers.",
+   "evidence": [
+    {
+     "response_id": "136b8240-008c-46ff-b744-592c4d859e98",
+     "quote": "Kaspr is primarily available as a **self-serve platform**."
+    },
+    {
+     "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930",
+     "quote": "Whether **Kaspr** delivers actual results or is just marketing hype depends heavily on **where you are prospecting** and **what you expect the tool to do**."
+    },
+    {
+     "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9",
+     "quote": "Canceling **Kaspr** (assuming you mean the B2B contact data and LinkedIn prospecting tool) is **technically straightforward** and can be handled directly through your dashboard, but you have to watch out for **strict notice periods** to avoid getting billed for another cycle.[fundraiseinsider.com](https://fundraiseinsider.com/blog/kaspr-alternatives/#:~:text=Kaspr%20requires%20advance%20cancellation%20notice%20before%20renewal,decisions%20across%20most%20opaque-billing%20B2B%20data%20platforms.)"
+    }
+   ],
+   "action": "Check robots.txt and page access for Googlebot and OAI-SearchBot; make sure the homepage and About page say in plain text what Kasparro is, who it serves and that it is not Kaspr; keep the same one-line description on the LinkedIn company page and job postings; add Organization structured data that matches the page (name, url, sameAs links). Google says no special AI markup is needed and eligibility does not guarantee inclusion.",
+   "expected_benefit": "Fewer answers about the wrong company, and answers built from Kasparro's own description instead of job ads.",
+   "uncertainty": "Medium. We did not open any page or check robots.txt. The mix-up may come from model training data, which site changes do not fix quickly.",
+   "validation_step": "Re-run the 25 branded prompts on Gemini: count answers about Kaspr (now 3/25) and answers citing kasparro.com (now 0/25). Also count job-posting citations (now 17)."
+  },
+  {
+   "id": "R3",
+   "priority": 3,
+   "effort": "medium",
+   "diagnostic_ids": [
+    "D2"
+   ],
+   "title": "Publish checkable proof and clear buyer facts",
+   "problem": "29/72 branded answers that mention Kasparro describe it negatively (ChatGPT 13/25). Most of that text is about missing independent evidence, not a concrete flaw.",
+   "evidence": [
+    {
+     "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2",
+     "quote": "Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026."
+    },
+    {
+     "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc",
+     "quote": "I couldn't find independent evidence showing that Kasparro consistently delivers measurable improvements for B2B SaaS companies specifically."
+    },
+    {
+     "response_id": "5492b420-7fa5-4de4-ab2c-6c4412e5b18d",
+     "quote": "If you mean **Kasparro (the AI Revenue Engine for D2C brands)**, there isn't much independent evidence yet that it's producing consistent, measurable results across a broad customer base."
+    }
+   ],
+   "action": "Publish dated case studies with verifiable outcomes (customer named with permission, what was measured, before/after numbers), and plain fact pages for what buyers asked: pricing, self-serve vs sales, cancellation, which AI engines are tracked. Use only facts Kasparro can back up. Seek independent reviews or write-ups that can be cited.",
+   "expected_benefit": "Gives engines something specific to cite when asked 'does it work' or 'is it legit', instead of 'no independent evidence'.",
+   "uncertainty": "Medium-high. We do not know what proof Kasparro has. A company case study is still the company's own claim; independent sources take time.",
+   "validation_step": "Re-run the 25 branded prompts on all 3 engines: negative when mentioned (now 29/72) and how many negative quotes are about missing evidence (tag them as in D2's test)."
+  }
+ ],
+ "notes": "Data: one capture per prompt and engine (31 July 2026); a snapshot, not a trend. All 2,439 citations are unverified: no cited page was opened. Analysis: qwen2.5:7b local, prompt classify-v3, categories cat-v1, scoring score-v1; 150/150 succeeded. Eval on 8 hand-labelled cases: LLM roughly ties a keyword baseline; known misses in eval/results/report.md. D3 source counts are SQL over the citations table. Branded and unbranded prompts are never merged."
+}

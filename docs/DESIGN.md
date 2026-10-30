@@ -26,7 +26,7 @@ app/
 eval/              cases/labels_v1.json, baseline.py, grader.py, run_eval.py, results/
 tests/             conftest.py, fixtures/mini_pack/ (made-up data), test_*.py
 replay/<prompt_version>/<id>.json       saved raw LLM outputs (eval cases: replay/eval/<prompt_version>/)
-out/analysis.json                       approved report export + active time (final output)
+out/analysis.json                       approved report export + active time; out/report_edits.json = analyst PATCH
 ```
 
 ## 3. Config (env vars, all in `.env.example`)

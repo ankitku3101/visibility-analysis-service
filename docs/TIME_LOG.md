@@ -12,3 +12,4 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 12:57 | Phase 01 done: setup, config, DB schema, errors, auth, `/health`. 9 tests pass. |
 | 30 Oct | 13:03 | Phase 01 review: fixed non-ASCII token 500, plain-text 500s, equal tokens; Swagger auth. 12 tests pass. |
 | 30 Oct | 13:12 | Phase 02 done: import with row checks and duplicate handling; self-review fixed 3 bugs. 44 tests pass. |
+| 30 Oct | 13:20 | Phase 03 done: LLM client (ollama/replay/stub), retries, limits; real call OK. Self-review fixed 2 issues. 67 tests pass. |

@@ -6,6 +6,7 @@ from app.api import datasets, health
 from app.config import get_settings
 from app.db import init_db
 from app.errors import register_error_handlers
+from app.llm.client import get_client
 
 
 @asynccontextmanager
@@ -22,6 +23,8 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
     register_error_handlers(app)
+    # The analysis API builds its LLM client through this, so tests can swap in a scripted StubClient.
+    app.state.client_factory = get_client
     app.include_router(health.router)
     app.include_router(datasets.router)
     return app

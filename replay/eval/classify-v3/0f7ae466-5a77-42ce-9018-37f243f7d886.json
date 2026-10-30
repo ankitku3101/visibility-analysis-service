@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Kasparro specifically states there is no retainer and no setup fee.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\"similar AI diagnostic service providers\"],\n  \"ranked_list\": null\n}",
+  "error_code": null
+ }
+]

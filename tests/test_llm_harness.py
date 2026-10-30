@@ -64,10 +64,40 @@ def test_call_limit():
 
 def test_validate_failure_is_evidence_not_found():
     def validate(data):
-        raise EvidenceError()
+        raise EvidenceError("negative")
 
     out = run(StubClient(), validate=validate)
     assert (out.status, out.error_code, out.attempts) == ("failed", "evidence_not_found", 3)
+
+
+class Recorder(StubClient):
+    def __init__(self, script):
+        super().__init__(script)
+        self.seen = []
+
+    def complete(self, key, messages, attempt):
+        self.seen.append(messages)
+        return super().complete(key, messages, attempt)
+
+
+def test_content_errors_retry_with_feedback_and_timeouts_do_not():
+    client = Recorder({"k1": ["timeout", "malformed", "ok"]})
+    out = run(client)
+    assert out.status == "succeeded"
+    assert client.seen[1] == MESSAGES                      # after a timeout: same request
+    assert client.seen[2][:2] == MESSAGES and len(client.seen[2]) == 4
+    assert client.seen[2][2] == {"role": "assistant", "content": "not json {"}
+    assert "not valid JSON" in client.seen[2][3]["content"]
+
+    client = Recorder({"k1": ["ok", "ok"]})
+    first = iter([True, False])
+
+    def validate_once(data):
+        if next(first):
+            raise EvidenceError("negative")
+
+    assert run(client, validate=validate_once).status == "succeeded"
+    assert "negative_quote you gave is not valid evidence" in client.seen[1][3]["content"]
 
 
 def ollama_with(handler, tmp_path, store=True):
@@ -111,6 +141,23 @@ def test_ollama_down_is_not_recorded(tmp_path):
     out = run(ollama_with(handler, tmp_path))
     assert out.error_code == "provider_unavailable"
     assert ReplayStore(str(tmp_path)).load("k1") == []
+
+
+@pytest.mark.parametrize("handler, code", [
+    (lambda r: httpx.Response(200, json={"models": [{"name": "qwen2.5:7b"}]}), None),
+    (lambda r: httpx.Response(200, json={"models": [{"name": "llama3:8b"}]}), "model_missing"),
+    (lambda r: (_ for _ in ()).throw(httpx.ConnectError("refused", request=r)), "provider_unavailable"),
+    (lambda r: httpx.Response(200, text="not json"), "provider_unavailable"),
+])
+def test_preflight_check(tmp_path, handler, code):
+    from app.llm.client import preflight
+    client = ollama_with(handler, tmp_path, store=False)
+    if code is None:
+        preflight(client)
+        return
+    with pytest.raises(AppError) as err:
+        preflight(client)
+    assert (err.value.status, err.value.code) == (503, code)
 
 
 def test_unsafe_key_stays_inside_replay_dir(tmp_path):

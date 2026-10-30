@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026.\",\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null
+ }
+]

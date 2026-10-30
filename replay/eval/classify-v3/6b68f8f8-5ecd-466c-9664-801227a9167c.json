@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\"recommended\": false, \"recommended_quote\": null, \"negative\": false, \"negative_quote\": null, \"competitors\": [\"Otterly AI\"], \"ranked_list\": null}",
+  "error_code": null
+ }
+]

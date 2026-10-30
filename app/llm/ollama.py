@@ -15,11 +15,22 @@ class OllamaClient:
 
     def __init__(self, settings: Settings, store: ReplayStore | None = None, http: httpx.Client | None = None):
         self.model = settings.ollama_model
-        self.url = settings.ollama_url.rstrip("/") + "/api/chat"
+        self.base = settings.ollama_url.rstrip("/")
+        self.url = self.base + "/api/chat"
         self.http = http or httpx.Client(timeout=settings.llm_timeout_s)
         self.store = store
         if store:
             store.write_meta({"model": self.model, "options": OPTIONS, "prompt_version": PROMPT_VERSION})
+
+    def check(self) -> None:
+        """Fail fast before a long run: Ollama must be reachable and the model pulled."""
+        try:
+            res = self.http.get(self.base + "/api/tags", timeout=5)
+            names = {m.get("name") for m in res.json().get("models", [])}
+        except (httpx.HTTPError, ValueError, AttributeError):
+            raise LLMError("provider_unavailable", f"Ollama is not reachable at {self.base}. Is it running?") from None
+        if self.model not in names and f"{self.model}:latest" not in names:
+            raise LLMError("model_missing", f"Model {self.model} is not installed. Run: ollama pull {self.model}")
 
     def _record(self, key: str, attempt: int, kind: str, raw: str | None = None, error_code: str | None = None):
         if self.store:

@@ -11,20 +11,24 @@ TEXT_FIELDS = {
 }
 
 
-def find_problems(conn: sqlite3.Connection, analysis_id: int, content: ReportContent, complete: bool) -> list[dict]:
+def answers_for(conn: sqlite3.Connection, analysis_id: int) -> dict[str, str]:
+    """response_id → answer_text for every response in the analysis."""
+    return {r["response_id"]: r["answer_text"] for r in conn.execute(
+        "SELECT r.response_id, r.answer_text FROM response_results rr "
+        "JOIN responses r ON r.response_id = rr.response_id WHERE rr.analysis_id = ?", (analysis_id,))}
+
+
+def find_problems(answers: dict[str, str], content: ReportContent, complete: bool) -> list[dict]:
+    """All checks, given the answers the report may cite. Also used by the eval grader."""
     problems = []
 
     def add(path: str, code: str, message: str):
         problems.append({"path": path, "code": code, "message": message})
 
-    answers = {r["response_id"]: r["answer_text"] for r in conn.execute(
-        "SELECT r.response_id, r.answer_text FROM response_results rr "
-        "JOIN responses r ON r.response_id = rr.response_id WHERE rr.analysis_id = ?", (analysis_id,))}
-
     def check_evidence(path: str, refs) -> None:
         for i, ref in enumerate(refs):
             if ref.response_id not in answers:
-                add(f"{path}.evidence[{i}]", "unknown_response", f"{ref.response_id} is not in analysis {analysis_id}")
+                add(f"{path}.evidence[{i}]", "unknown_response", f"{ref.response_id} is not in this analysis")
             elif not quote_in_text(ref.quote, answers[ref.response_id]):
                 add(f"{path}.evidence[{i}].quote", "quote_not_found", f"Quote is not in the answer of {ref.response_id}")
 
@@ -62,6 +66,6 @@ def find_problems(conn: sqlite3.Connection, analysis_id: int, content: ReportCon
 
 
 def validate_content(conn: sqlite3.Connection, analysis_id: int, content: ReportContent, complete: bool) -> None:
-    problems = find_problems(conn, analysis_id, content, complete)
+    problems = find_problems(answers_for(conn, analysis_id), content, complete)
     if problems:
         raise AppError(422, "invalid_report", f"{len(problems)} problem(s) in the report.", problems)

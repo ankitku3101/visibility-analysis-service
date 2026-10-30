@@ -25,7 +25,7 @@ class LLMError(Exception):
 
 
 class EvidenceError(Exception):
-    """Raised by a `validate` callback when a quote is not found in the answer."""
+    """Raised by a `validate` callback when a quote is not found in the answer. The message names the label."""
 
 
 class OutputError(Exception):
@@ -77,29 +77,43 @@ def parse_output(raw: str | None) -> ClassifyOutput:
         raise OutputError("malformed_output") from None
 
 
+FEEDBACK = {
+    "empty_output": "Your reply was empty. Reply with the JSON object only.",
+    "malformed_output": "Your reply was not valid JSON with the required keys and limits. Reply with the JSON object only.",
+    "evidence_not_found": ("The {label}_quote you gave is not valid evidence. It must be one sentence copied "
+                           "exactly from the answer that shows the label, not an instruction. Copy such a "
+                           "sentence, or set {label} to false if no sentence supports it."),
+}
+MAX_ECHO_CHARS = 2000  # how much of a bad reply is shown back to the model
+
+
 def call_with_retries(client: LLMClient, key: str, messages: list[dict], settings: Settings, budget: Budget,
                       validate: Callable[[ClassifyOutput], None] | None = None,
                       log: LogFn | None = None) -> Outcome:
+    """Bounded retries. Transport errors retry the same request. Content errors retry with the previous
+    reply and a short correction, because at temperature 0 the same request gives the same reply."""
     max_attempts = settings.llm_max_retries + 1
     last_error = None
     attempt = 0
+    current = messages
     while attempt < max_attempts:
         if budget.used >= budget.limit:
             return Outcome("failed", None, "call_limit_reached", attempt)
         attempt += 1
         budget.used += 1
         started = time.perf_counter()
-        data, error = None, None
+        data, error, raw, label = None, None, None, ""
         try:
-            data = parse_output(client.complete(key, messages, attempt))
+            raw = client.complete(key, current, attempt)
+            data = parse_output(raw)
             if validate:
                 validate(data)
         except LLMTimeout:
             error = "timeout"
         except (LLMError, OutputError) as e:
             error = e.code
-        except EvidenceError:
-            error = "evidence_not_found"
+        except EvidenceError as e:
+            error, label = "evidence_not_found", str(e)
         latency_ms = int((time.perf_counter() - started) * 1000)
         if log:
             log(attempt=attempt, status="ok" if error is None else "error", latency_ms=latency_ms, error_code=error)
@@ -108,7 +122,23 @@ def call_with_retries(client: LLMClient, key: str, messages: list[dict], setting
         last_error = error
         if error in NO_RETRY:
             break
+        if error in FEEDBACK:
+            current = messages + [
+                {"role": "assistant", "content": (raw or "")[:MAX_ECHO_CHARS]},
+                {"role": "user", "content": FEEDBACK[error].format(label=label or "label")},
+            ]
     return Outcome("failed", None, last_error, attempt)
+
+
+def preflight(client: LLMClient) -> None:
+    """Clients that talk to a real provider expose check(); turn its failure into a clear 503."""
+    check = getattr(client, "check", None)
+    if check is None:
+        return
+    try:
+        check()
+    except LLMError as e:
+        raise AppError(503, e.code, str(e)) from None
 
 
 def get_client(settings: Settings) -> LLMClient:

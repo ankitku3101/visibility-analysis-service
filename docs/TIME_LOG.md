@@ -16,3 +16,6 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 13:28 | Phase 04 done: background analysis with evidence checks; local smoke 3/3 OK. Fixed regex hang + quote matching. 94 tests pass. |
 | 30 Oct | 13:38 | Phase 05 done: score-v1, groups split branded/unbranded, citation stats. Fixed SPEC citation fact. 106 tests pass. |
 | 30 Oct | 13:49 | Phase 06 done: report versions, review rules, export control; full curl flow on real pack OK. 126 tests pass. |
+| 30 Oct | 13:56 | Phase 07 part 1: eval harness (baseline, grader, runner, probes), 12 proposed cases. 131 tests pass. Waiting on human labels. |
+| 30 Oct | 14:50 | Phase 07 done: labels confirmed, tuned v1→v3 on tuning split (F2, F3), held-out run found injection (F4, fixed). 136 tests pass. |
+| 30 Oct | 14:55 | Pre-run review: separate eval replay folder, Ollama preflight (503), context-size check. 140 tests pass. |

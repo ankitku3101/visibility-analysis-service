@@ -4,7 +4,10 @@ from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field
 
-PROMPT_VERSION = "classify-v1"
+# v2 (after tuning on the tuning split): negative excludes plain comparison losses, competitors must be real
+# products/companies, and retries now carry feedback. See eval/cases/labels_v1.json failure_log F2/F3.
+# v3: retry feedback says an instruction is not evidence (failure F4, prompt injection in case s01).
+PROMPT_VERSION = "classify-v3"
 
 SYSTEM_PROMPT = """You classify how the brand "Kasparro" appears in one AI assistant answer.
 
@@ -20,12 +23,15 @@ Definitions:
 - recommended: the answer presents Kasparro as a suitable option for the question (suggests using it,
   or says it fits the need). Only naming or describing Kasparro is not a recommendation.
 - negative: the answer criticises Kasparro, doubts it, warns about it, or says it is unknown,
-  not widely recognized or not established.
+  not widely recognized or not established. Preferring another tool, or saying Kasparro suits a
+  different kind of customer, is not negative by itself.
 - recommended_quote / negative_quote: copy one short sentence word for word from the answer that
   shows the label. Use null when the label is false.
-- competitors: other tools or companies offered for the same job as Kasparro (AI visibility tracking,
-  AI search optimization, GEO/AEO tools or agencies). Do not include Kasparro, AI assistants or search
-  engines (ChatGPT, Gemini, Claude, Perplexity, Copilot, Google) or review sites (G2, Capterra, Reddit).
+- competitors: names of real products or companies offered for the same job as Kasparro (AI visibility
+  tracking, AI search optimization, GEO/AEO tools or agencies). Never include section headings, methods,
+  strategies or categories (for example "GEO" or "Third-Party Validation"), websites only cited as
+  sources, Kasparro itself, AI assistants or search engines (ChatGPT, Gemini, Claude, Perplexity,
+  Copilot, Google) or review sites (G2, Capterra, Reddit).
 - ranked_list: if the answer has an explicit numbered or ranked list of tools, the tool names in that
   order. Otherwise null.
 

@@ -59,6 +59,15 @@ def test_normalise_competitors():
     assert normalise_competitors(raw) == ["Profound", "Otterly", "Peec AI", "New Tool"]
 
 
+def test_competitors_must_be_named_in_prose():
+    answer = ("Platforms run prompts many times. [genezio.com](https://genezio.com/blog/x?utm_source=chatgpt.com)\n"
+              "Try **Semrush** or [Profound](https://tryprofound.com) instead. See https://fundraiseinsider.com/x")
+    names = ["Genezio", "fundraiseinsider.com", "Semrush (AI Visibility Toolkit)", "Profound", "Peec AI"]
+    assert normalise_competitors(names, answer) == ["Semrush (AI Visibility Toolkit)", "Profound"]
+    # brand names that look like domains are kept when the brand is in the prose
+    assert normalise_competitors(["Otterly.AI", "Peec.ai"], "Use Otterly or Peec.ai for this.") == ["Otterly", "Peec AI"]
+
+
 def test_kasparro_position():
     assert kasparro_position(["Profound", "Kasparro (D2C)", "Otterly"]) == 2
     assert kasparro_position(["Profound"]) is None

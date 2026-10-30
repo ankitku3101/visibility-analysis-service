@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": true,\n  \"negative_quote\": \"Kasparro (assuming you mean the AI visibility platform rather than another product with a similar name) is aimed much more at **retail and CPG brands**. Its metrics revolve around AI shopping recommendations, 'Brand Inclusion Rate,' 'Share of Invisible Shelf,' and agentic commerce rather than B2B software evaluation.\",\n  \"competitors\": [\"Profound\", \"Genezio\"],\n  \"ranked_list\": [\"Profound\", \"Genezio\"]\n}",
+  "error_code": null
+ }
+]

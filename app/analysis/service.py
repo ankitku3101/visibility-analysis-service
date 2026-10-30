@@ -1,9 +1,11 @@
 """Analysis runs: create a run, analyse one response, read results."""
 import json
+import re
 import sqlite3
 
 from app.analysis.categories import CATEGORY_VERSION, categorize
-from app.analysis.preprocess import find_mention, kasparro_cited, quote_in_text, strip_url_list
+from app.analysis.preprocess import (DOMAIN_LIKE, find_mention, kasparro_cited, named_in_prose, prose_only,
+                                     quote_in_text, strip_url_list)
 from app.config import Settings
 from app.db import now
 from app.errors import AppError
@@ -11,9 +13,14 @@ from app.llm.client import Budget, EvidenceError, LLMClient, LogFn, call_with_re
 from app.llm.prompts import PROMPT_VERSION, ClassifyOutput, build_messages
 from app.scoring.score import SCORING_VERSION
 
+# Text that talks to the classifier instead of describing Kasparro (prompt injection inside an answer).
+INSTRUCTION = re.compile(
+    r"ignore (all |any )?(the )?(previous|prior|above) instructions|\b(respond|reply) with\b|"
+    r"\bmark kasparro as\b|[{,]\s*[\"'](recommended|negative)[\"']\s*:", re.IGNORECASE)
+
 # Same company, different spellings → one name. Keys are lowercase.
 ALIASES = {
-    "otterly": "Otterly", "otterly.ai": "Otterly", "otterly ai": "Otterly",
+    "otterly": "Otterly", "otterly.ai": "Otterly", "otterly ai": "Otterly", "otterlyai": "Otterly",
     "peec": "Peec AI", "peec ai": "Peec AI", "peec.ai": "Peec AI",
     "athenahq": "AthenaHQ", "athena hq": "AthenaHQ", "athena": "AthenaHQ",
     "profound": "Profound", "dageno": "Dageno AI", "dageno ai": "Dageno AI",
@@ -23,14 +30,24 @@ NOT_COMPETITORS = {"chatgpt", "openai", "gemini", "claude", "perplexity", "copil
                    "google ai mode", "g2", "capterra", "reddit", "seo", "geo", "aeo", "aiso"}
 
 
-def normalise_competitors(names: list[str]) -> list[str]:
+def normalise_competitors(names: list[str], answer: str | None = None) -> list[str]:
+    """Clean the model's competitor list. With `answer`, a name must appear in the answer's prose:
+    the model also lists websites that are only cited as sources (eval failure F3)."""
+    prose = prose_only(answer) if answer is not None else None
     out, seen = [], set()
     for name in names:
         name = name.strip()
         key = name.lower()
         if not name or "kasparro" in key or key in NOT_COMPETITORS:
             continue
-        canonical = ALIASES.get(key, name)
+        canonical = ALIASES.get(key, name)  # "Otterly.AI" → "Otterly" before any domain check
+        if prose is not None:
+            # "fundraiseinsider.com" → look for "fundraiseinsider" in the prose; a real brand like "Peec.ai"
+            # is still found because its name appears outside links.
+            check = re.sub(r"\.[a-z]{2,4}(/\S*)?$", "", canonical, flags=re.IGNORECASE) \
+                if DOMAIN_LIKE.fullmatch(canonical) else canonical
+            if not named_in_prose(check, prose):
+                continue
         if canonical.lower() not in seen:
             seen.add(canonical.lower())
             out.append(canonical)
@@ -65,7 +82,11 @@ def analyse_response(response: dict, question: str, citations: list[dict], clien
         if not mentioned:
             return  # labels are forced false below, so their quotes do not matter
         for label in ("recommended", "negative"):
-            if getattr(data, label) and not quote_in_text(getattr(data, f"{label}_quote"), answer):
+            if not getattr(data, label):
+                continue
+            quote = getattr(data, f"{label}_quote")
+            # An instruction aimed at the classifier is never evidence (eval failure F4, case s01).
+            if not quote_in_text(quote, answer) or INSTRUCTION.search(quote):
                 raise EvidenceError(label)
 
     outcome = call_with_retries(client, response["response_id"], build_messages(question, cleaned),
@@ -85,7 +106,7 @@ def analyse_response(response: dict, question: str, citations: list[dict], clien
         evidence["negative"] = data.negative_quote
     return {
         **result, "status": "succeeded", "mentioned": mentioned, "recommended": recommended,
-        "negative": negative, "evidence": evidence, "competitors": normalise_competitors(data.competitors),
+        "negative": negative, "evidence": evidence, "competitors": normalise_competitors(data.competitors, cleaned),
         "ranked_list": data.ranked_list, "position": kasparro_position(data.ranked_list),
     }
 
@@ -97,7 +118,7 @@ def create_run(conn: sqlite3.Connection, dataset_id: int, limit: int | None, cli
             raise AppError(404, "dataset_not_found", f"Dataset {dataset_id} does not exist.")
         if not conn.execute("SELECT 1 FROM responses WHERE dataset_id = ?", (dataset_id,)).fetchone():
             raise AppError(422, "dataset_empty", f"Dataset {dataset_id} has no responses to analyse.")
-        running =conn.execute("SELECT id FROM analysis_runs WHERE status = 'running'").fetchone()
+        running = conn.execute("SELECT id FROM analysis_runs WHERE status = 'running'").fetchone()
         if running:
             raise AppError(409, "analysis_running", "Another analysis is still running.",
                            {"analysis_id": running["id"]})

@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": true,\n  \"recommended_quote\": \"Yes, **Kasparro** is designed specifically for this use case.\",\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [],\n  \"ranked_list\": null\n}",
+  "error_code": null
+ }
+]

@@ -6,6 +6,7 @@ from app.analysis.service import create_run, get_run
 from app.auth import current_actor, require_role
 from app.config import get_settings
 from app.db import connect
+from app.llm.client import preflight
 from app.scoring.aggregate import build_scores
 
 router = APIRouter(tags=["analyses"])
@@ -21,6 +22,7 @@ class AnalysisRequest(BaseModel):
 def create_analysis(body: AnalysisRequest, request: Request, actor: str = Depends(require_role("analyst"))):
     settings = get_settings()
     client = request.app.state.client_factory(settings)  # 400 here if the mode cannot run
+    preflight(client)  # 503 now instead of 150 failed responses later (local mode only)
     conn = connect(settings.db_path)
     try:
         run_id = create_run(conn, body.dataset_id, body.limit, client)

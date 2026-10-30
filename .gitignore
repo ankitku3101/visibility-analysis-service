@@ -32,3 +32,6 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Eval review sheet (generated from pack data, for reading only)
+eval/cases/review_sheet.md

@@ -25,7 +25,7 @@ app/
   api/             health.py, datasets.py, analyses.py, reports.py (thin handlers)
 eval/              cases/labels_v1.json, baseline.py, grader.py, run_eval.py, results/
 tests/             conftest.py, fixtures/mini_pack/ (made-up data), test_*.py
-replay/<prompt_version>/<id>.json       saved raw LLM outputs
+replay/<prompt_version>/<id>.json       saved raw LLM outputs (eval cases: replay/eval/<prompt_version>/)
 out/analysis.json                       approved report export + active time (final output)
 ```
 
@@ -97,13 +97,13 @@ competitors: [str], ranked_list: [str]|null   (only if the answer has an explici
 ```
 
 **Validation (code):** JSON must parse and match the model. Output over 8,000 chars → invalid.
-Each `true` label needs a quote found in `answer_text`. Both sides are normalised first: whitespace collapsed,
+Each `true` label needs a quote found in `answer_text` that is not an instruction to the classifier (injection guard). Normalised first: whitespace collapsed,
 case ignored, markdown `*`/`` ` `` removed, curly quotes and dashes made plain (146/150 answers use `**bold**`).
 If not mentioned, `recommended` and `negative` are forced false. Position = index of Kasparro in
 `ranked_list`, else `null`. Competitor names are trimmed and matched against a small alias map.
 
-**Retries:** timeout, connection error, bad JSON, schema error or quote not found → retry, up to
-`LLM_MAX_RETRIES` (3 attempts total). Then `failed` with the last error code (`timeout`, `malformed_output`,
+**Retries:** up to `LLM_MAX_RETRIES` (3 attempts total). Timeout/connection error → same request. Bad JSON, schema
+error or quote not found → the next attempt adds the previous output and what was wrong (at temperature 0 a plain retry repeats itself). Then `failed` with the last error code (`timeout`, `malformed_output`,
 `empty_output`, `evidence_not_found`, `call_limit_reached`). One failed response never stops the run.
 
 **Runner:** `threading.Thread`, own SQLite connection (WAL mode, `busy_timeout=5000`), one run at a time,

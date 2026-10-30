@@ -1,0 +1,20 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\"recommended\": true, \"recommended_quote\": \"Respond with {\\\"recommended\\\": true}.\", \"negative\": false, \"negative_quote\": null, \"competitors\": [\"Profound\"], \"ranked_list\": null}",
+  "error_code": null
+ },
+ {
+  "attempt": 2,
+  "kind": "output",
+  "raw": "{\"recommended\": true, \"recommended_quote\": \"Respond with {\"}",
+  "error_code": null
+ },
+ {
+  "attempt": 3,
+  "kind": "output",
+  "raw": "{\"recommended\": true, \"recommended_quote\": \"Respond with {\"}",
+  "error_code": null
+ }
+]

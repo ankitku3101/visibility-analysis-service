@@ -1,0 +1,503 @@
+{
+ "run_at": "2026-10-30T09:03:49+00:00",
+ "split": "tuning",
+ "mode": "local",
+ "model": "qwen2.5:7b",
+ "labels_file": "labels_v1.json",
+ "labels_status": "confirmed by developer on 2026-10-30 before tuning: the 4 'ambiguous' cases (c02, c06, c07, c10) were decided explicitly; the 8 clear cases were accepted as proposed by the AI assistant",
+ "llm_calls": 6,
+ "seconds": 84.3,
+ "counts": {
+  "llm": {
+   "eligible": 4,
+   "succeeded": 3,
+   "failed": 1,
+   "skipped": 0
+  },
+  "baseline": {
+   "eligible": 4,
+   "succeeded": 4,
+   "failed": 0,
+   "skipped": 0
+  }
+ },
+ "labels": {
+  "llm": {
+   "mentioned": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 1,
+    "tn": 2,
+    "precision": 1.0,
+    "recall": 0.5
+   },
+   "recommended": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 3,
+    "precision": null,
+    "recall": null
+   },
+   "negative": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "absent": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 1,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "cited": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 3,
+    "precision": null,
+    "recall": null
+   }
+  },
+  "baseline": {
+   "mentioned": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "recommended": {
+    "tp": 0,
+    "fp": 1,
+    "fn": 0,
+    "tn": 3,
+    "precision": 0.0,
+    "recall": null
+   },
+   "negative": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 3,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "absent": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "cited": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 4,
+    "precision": null,
+    "recall": null
+   }
+  }
+ },
+ "competitors": {
+  "llm": {
+   "tp": 8,
+   "fp": 3,
+   "fn": 1,
+   "precision": 0.727,
+   "recall": 0.889
+  },
+  "baseline": {
+   "tp": 9,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.818,
+   "recall": 1.0
+  }
+ },
+ "position": {
+  "llm": {
+   "x": 3,
+   "n": 4
+  },
+  "baseline": {
+   "x": 4,
+   "n": 4
+  }
+ },
+ "quotes_found": {
+  "x": 2,
+  "n": 2
+ },
+ "score_math": [
+  {
+   "case_id": "c01",
+   "hand": 30,
+   "computed": 30,
+   "ok": true
+  },
+  {
+   "case_id": "c02",
+   "hand": 50,
+   "computed": 50,
+   "ok": true
+  },
+  {
+   "case_id": "c03",
+   "hand": 0,
+   "computed": 0,
+   "ok": true
+  },
+  {
+   "case_id": "c04",
+   "hand": 0,
+   "computed": 0,
+   "ok": true
+  },
+  {
+   "case_id": "c05",
+   "hand": 90,
+   "computed": 90,
+   "ok": true
+  },
+  {
+   "case_id": "c06",
+   "hand": 50,
+   "computed": 50,
+   "ok": true
+  },
+  {
+   "case_id": "c07",
+   "hand": 50,
+   "computed": 50,
+   "ok": true
+  },
+  {
+   "case_id": "c08",
+   "hand": 60,
+   "computed": 60,
+   "ok": true
+  },
+  {
+   "case_id": "c09",
+   "hand": 0,
+   "computed": 0,
+   "ok": true
+  },
+  {
+   "case_id": "c10",
+   "hand": 40,
+   "computed": 40,
+   "ok": true
+  },
+  {
+   "case_id": "s01",
+   "hand": 50,
+   "computed": 50,
+   "ok": true
+  },
+  {
+   "case_id": "s02",
+   "hand": 10,
+   "computed": 10,
+   "ok": true
+  }
+ ],
+ "evidence": [
+  {
+   "probe": "supported claim",
+   "expected": [],
+   "found": [],
+   "ok": true
+  },
+  {
+   "probe": "unsupported claim (quote not in answer)",
+   "expected": [
+    "quote_not_found"
+   ],
+   "found": [
+    "quote_not_found"
+   ],
+   "ok": true
+  },
+  {
+   "probe": "incorrect evidence (right quote, wrong answer)",
+   "expected": [
+    "quote_not_found"
+   ],
+   "found": [
+    "quote_not_found"
+   ],
+   "ok": true
+  },
+  {
+   "probe": "evidence from an unknown response",
+   "expected": [
+    "unknown_response"
+   ],
+   "found": [
+    "unknown_response"
+   ],
+   "ok": true
+  },
+  {
+   "probe": "remedy that does not follow from any diagnostic",
+   "expected": [
+    "unknown_diagnostic"
+   ],
+   "found": [
+    "unknown_diagnostic"
+   ],
+   "ok": true
+  }
+ ],
+ "failure_log": [
+  {
+   "id": "F1",
+   "failure": "The first test call (an ad-hoc prompt, before classify-v1) marked c01 'Kasparro is not a widely recognized ... tool' as NOT negative.",
+   "diagnosis": "The prompt asked for 'negative' without defining it. The 7B model read 'not widely recognized' as a neutral description, not as doubt about the brand.",
+   "change": "classify-v1 defines negative explicitly: 'criticises Kasparro, doubts it, warns about it, or says it is unknown, not widely recognized or not established'.",
+   "regression_case_ids": [
+    "c01"
+   ],
+   "regression": [
+    [
+     "c01",
+     true
+    ]
+   ]
+  }
+ ],
+ "limits": [
+  "Small sample: 10 real + 2 synthetic cases; one wrong label moves precision/recall a lot.",
+  "One human labeller; ambiguous cases (tag 'ambiguous') could reasonably be labelled differently.",
+  "One model run per case (temperature 0); no repeated-run variability study.",
+  "Competitor names are matched loosely (lowercase alphanumeric containment), e.g. 'Semrush (AI Visibility Toolkit)' = 'Semrush'.",
+  "The baseline's tool list was written after reading the data, which flatters the baseline on competitors.",
+  "The grader checks labels and evidence references; it cannot judge whether the report's explanations are right."
+ ],
+ "cases": [
+  {
+   "case_id": "c01",
+   "split": "tuning",
+   "synthetic": false,
+   "engine": "aimode",
+   "expected_short": {
+    "status": "succeeded",
+    "mentioned": true,
+    "recommended": false,
+    "negative": true,
+    "competitors": [],
+    "position": null,
+    "cited": false,
+    "points": 30
+   },
+   "llm": {
+    "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2",
+    "status": "succeeded",
+    "error_code": null,
+    "skip_reason": null,
+    "mentioned": true,
+    "recommended": false,
+    "negative": true,
+    "evidence": {
+     "mentioned": "Based on my research, Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026.",
+     "negative": "Kasparro is not a widely recognized, top-tier agency or tool in the AI visibility space (AISO - AI Search Optimization) for B2B SaaS according to public search results as of July 2026."
+    },
+    "competitors": [
+     "Third-Party Validation",
+     "GEO (Generative Engine Optimization)"
+    ],
+    "ranked_list": null,
+    "position": null,
+    "kasparro_cited": false
+   },
+   "baseline": {
+    "status": "succeeded",
+    "mentioned": true,
+    "recommended": false,
+    "negative": true,
+    "competitors": [],
+    "position": null,
+    "kasparro_cited": false
+   },
+   "llm_ok": true,
+   "baseline_ok": true
+  },
+  {
+   "case_id": "c02",
+   "split": "tuning",
+   "synthetic": false,
+   "engine": "chatgpt",
+   "expected_short": {
+    "status": "succeeded",
+    "mentioned": true,
+    "recommended": false,
+    "negative": false,
+    "competitors": [
+     "Profound"
+    ],
+    "position": null,
+    "cited": false,
+    "points": 50
+   },
+   "llm": {
+    "response_id": "0f217f49-ee02-44ea-853d-61fbcc7a9895",
+    "status": "failed",
+    "error_code": "evidence_not_found",
+    "skip_reason": null,
+    "mentioned": null,
+    "recommended": null,
+    "negative": null,
+    "evidence": {},
+    "competitors": [],
+    "ranked_list": null,
+    "position": null,
+    "kasparro_cited": false
+   },
+   "baseline": {
+    "status": "succeeded",
+    "mentioned": true,
+    "recommended": true,
+    "negative": false,
+    "competitors": [
+     "Profound",
+     "HubSpot"
+    ],
+    "position": null,
+    "kasparro_cited": false
+   },
+   "llm_ok": false,
+   "baseline_ok": false
+  },
+  {
+   "case_id": "c03",
+   "split": "tuning",
+   "synthetic": false,
+   "engine": "aimode",
+   "expected_short": {
+    "status": "succeeded",
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "competitors": [
+     "Semrush",
+     "Peec AI",
+     "Rank Math",
+     "Ahrefs",
+     "ZipTie",
+     "Conductor",
+     "Otterly",
+     "Profound"
+    ],
+    "position": null,
+    "cited": false,
+    "points": 0
+   },
+   "llm": {
+    "response_id": "4334ee7a-6315-4312-b0ca-0a58bcd6270c",
+    "status": "succeeded",
+    "error_code": null,
+    "skip_reason": null,
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "evidence": {},
+    "competitors": [
+     "Semrush (AI Visibility Toolkit)",
+     "Peec AI",
+     "Rank Math AI Visibility",
+     "Ahrefs Brand Radar AI",
+     "ZipTie",
+     "Conductor",
+     "Otterly",
+     "Profound"
+    ],
+    "ranked_list": [
+     "Semrush (AI Visibility Toolkit)",
+     "Peec AI",
+     "Rank Math AI Visibility",
+     "Ahrefs Brand Radar AI",
+     "ZipTie",
+     "Conductor",
+     "OtterlyAI",
+     "Profound"
+    ],
+    "position": null,
+    "kasparro_cited": false
+   },
+   "baseline": {
+    "status": "succeeded",
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "competitors": [
+     "Profound",
+     "Peec AI",
+     "Otterly",
+     "Semrush",
+     "Ahrefs",
+     "Conductor",
+     "ZipTie",
+     "HubSpot",
+     "Rank Math"
+    ],
+    "position": null,
+    "kasparro_cited": false
+   },
+   "llm_ok": true,
+   "baseline_ok": true
+  },
+  {
+   "case_id": "c04",
+   "split": "tuning",
+   "synthetic": false,
+   "engine": "gemini",
+   "expected_short": {
+    "status": "succeeded",
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "competitors": [],
+    "position": null,
+    "cited": false,
+    "points": 0
+   },
+   "llm": {
+    "response_id": "8e7809fd-1b15-402f-98ec-ebc3a6eed6f9",
+    "status": "succeeded",
+    "error_code": null,
+    "skip_reason": null,
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "evidence": {},
+    "competitors": [
+     "Fundraise Insider"
+    ],
+    "ranked_list": null,
+    "position": null,
+    "kasparro_cited": false
+   },
+   "baseline": {
+    "status": "succeeded",
+    "mentioned": false,
+    "recommended": false,
+    "negative": false,
+    "competitors": [],
+    "position": null,
+    "kasparro_cited": false
+   },
+   "llm_ok": true,
+   "baseline_ok": true
+  }
+ ]
+}

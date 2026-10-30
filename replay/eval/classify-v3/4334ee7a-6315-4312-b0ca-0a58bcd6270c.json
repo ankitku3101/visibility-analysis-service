@@ -1,0 +1,8 @@
+[
+ {
+  "attempt": 1,
+  "kind": "output",
+  "raw": "{\n  \"recommended\": false,\n  \"recommended_quote\": null,\n  \"negative\": false,\n  \"negative_quote\": null,\n  \"competitors\": [\n    \"Semrush (AI Visibility Toolkit)\",\n    \"Peec AI\",\n    \"Rank Math AI Visibility\",\n    \"Ahrefs Brand Radar AI\",\n    \"ZipTie\",\n    \"Conductor\",\n    \"OtterlyAI\",\n    \"Profound\"\n  ],\n  \"ranked_list\": [\n    \"Semrush (AI Visibility Toolkit)\",\n    \"Peec AI\",\n    \"Rank Math AI Visibility\",\n    \"Ahrefs Brand Radar AI\",\n    \"ZipTie\",\n    \"Conductor\",\n    \"OtterlyAI\",\n    \"Profound\"\n  ]\n}",
+  "error_code": null
+ }
+]

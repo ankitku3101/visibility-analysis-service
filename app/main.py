@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.api import health
+from app.api import datasets, health
 from app.config import get_settings
 from app.db import init_db
 from app.errors import register_error_handlers
@@ -23,6 +23,7 @@ def create_app() -> FastAPI:
     )
     register_error_handlers(app)
     app.include_router(health.router)
+    app.include_router(datasets.router)
     return app
 
 

@@ -11,3 +11,4 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 12:53 | Final docs review: fixed `.gitignore` hiding `tests/fixtures/`, synced SPEC wording with DESIGN. |
 | 30 Oct | 12:57 | Phase 01 done: setup, config, DB schema, errors, auth, `/health`. 9 tests pass. |
 | 30 Oct | 13:03 | Phase 01 review: fixed non-ASCII token 500, plain-text 500s, equal tokens; Swagger auth. 12 tests pass. |
+| 30 Oct | 13:12 | Phase 02 done: import with row checks and duplicate handling; self-review fixed 3 bugs. 44 tests pass. |

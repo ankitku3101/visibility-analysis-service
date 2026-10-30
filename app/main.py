@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.analysis.runner import mark_interrupted
-from app.api import analyses, datasets, health
+from app.api import analyses, datasets, health, reports
 from app.config import get_settings
 from app.db import connect, init_db
 from app.errors import register_error_handlers
@@ -35,6 +35,7 @@ def create_app() -> FastAPI:
     app.include_router(health.router)
     app.include_router(datasets.router)
     app.include_router(analyses.router)
+    app.include_router(reports.router)
     return app
 
 

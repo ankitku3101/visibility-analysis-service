@@ -31,15 +31,21 @@ def strip_url_list(text: str) -> str:
 
 def find_mention(text: str) -> tuple[bool, str | None]:
     """Is Kasparro named? If so, return the sentence around the first mention (a substring of `text`)."""
-    match = MENTION.search(text)
+    sentence = sentence_with(text, MENTION)
+    return sentence is not None, sentence
+
+
+def sentence_with(text: str, pattern: re.Pattern) -> str | None:
+    """The sentence around the first match of `pattern` (a substring of `text`), or None."""
+    match = pattern.search(text)
     if not match:
-        return False, None
+        return None
     start = 0
     for m in SENTENCE_END.finditer(text, 0, match.start()):
         start = m.end()
     after = SENTENCE_END.search(text, match.end())
     end = after.end() if after and after.group() != "\n" else (after.start() if after else len(text))
-    return True, text[start:end].strip()
+    return text[start:end].strip()
 
 
 def normalise(text: str) -> str:

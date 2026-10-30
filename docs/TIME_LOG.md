@@ -15,3 +15,4 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 13:20 | Phase 03 done: LLM client (ollama/replay/stub), retries, limits; real call OK. Self-review fixed 2 issues. 67 tests pass. |
 | 30 Oct | 13:28 | Phase 04 done: background analysis with evidence checks; local smoke 3/3 OK. Fixed regex hang + quote matching. 94 tests pass. |
 | 30 Oct | 13:38 | Phase 05 done: score-v1, groups split branded/unbranded, citation stats. Fixed SPEC citation fact. 106 tests pass. |
+| 30 Oct | 13:49 | Phase 06 done: report versions, review rules, export control; full curl flow on real pack OK. 126 tests pass. |

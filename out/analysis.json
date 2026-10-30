@@ -1,15 +1,15 @@
 {
  "report_id": 1,
  "analysis_id": 1,
- "version": 2,
+ "version": 3,
  "is_latest": true,
  "notice": null,
  "status": "approved",
- "content_hash": "a912637c668462c632bca987da11cc9b7a52245177968be1fd4a0743b1066e92",
+ "content_hash": "e287c098b064ca87514d021e057b06914c92d0b2cafad9bcb35dc02e88e151b7",
  "approval": {
   "actor": "reviewer",
-  "comment": "Evidence checked against quotes; remedies are investigations with clear measures. Approved.",
-  "at": "2026-10-30T12:23:24.287756+00:00"
+  "comment": "Same content as v2; notes now give the correct active time (break excluded). Approved.",
+  "at": "2026-10-30T12:35:11.772789+00:00"
  },
  "llm_mode": "local",
  "model": "qwen2.5:7b",
@@ -19,7 +19,7 @@
   "scoring": "score-v1"
  },
  "exported_by": "analyst",
- "exported_at": "2026-10-30T12:23:24.569855+00:00",
+ "exported_at": "2026-10-30T12:35:11.795122+00:00",
  "content": {
   "diagnostics": [
    {
@@ -29,7 +29,7 @@
       "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a"
      },
      {
-      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpotâ€™s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
+      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpot’s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
       "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d"
      },
      {
@@ -106,7 +106,7 @@
     "title": "Engines differ, and Gemini mixes Kasparro up with Kaspr"
    }
   ],
-  "notes": "Data: one capture per prompt and engine (31 July 2026); a snapshot, not a trend. All 2,439 citations are unverified: no cited page was opened. Analysis: qwen2.5:7b local, prompt classify-v3, categories cat-v1, scoring score-v1; 150/150 succeeded. Eval on 8 hand-labelled cases: LLM roughly ties a keyword baseline; known misses in eval/results/report.md. D3 source counts are SQL over the citations table. Branded and unbranded prompts are never merged. Active time: 5 h 55 min at approval (wall clock 12:00-17:55 on 30 Oct 2026, including about 50 min waiting on two full local model runs). README and DECISIONS.md were written after approval; the final total is in docs/TIME_LOG.md.",
+  "notes": "Data: one capture per prompt and engine (31 July 2026); a snapshot, not a trend. All 2,439 citations are unverified: no cited page was opened. Analysis: qwen2.5:7b local, prompt classify-v3, categories cat-v1, scoring score-v1; 150/150 succeeded. Eval on 8 hand-labelled cases: LLM roughly ties a keyword baseline; known misses in eval/results/report.md. D3 source counts are SQL over the citations table. Branded and unbranded prompts are never merged. Active time: about 4 h 35 min at approval (wall clock 12:00-17:53 on 30 Oct 2026, minus a break of about 1 h 20 min from 15:48 to 17:08; includes about 50 min waiting on local model runs). Final total in docs/TIME_LOG.md.",
   "remedies": [
    {
     "action": "Investigation first (about 1 day): open the comparison/list pages cited by the unbranded answers and record which brands each names. Then (1) decide with the growth lead whether Kasparro targets B2B SaaS questions at all, given its D2C focus; (2) if yes, publish a factual page on kasparro.com that answers these questions using only claims Kasparro can support, and ask authors of the cited comparison pages for a fact check or inclusion. No paid placements, no invented claims.",
@@ -120,7 +120,7 @@
       "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a"
      },
      {
-      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpotâ€™s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
+      "quote": "To avoid manually querying ChatGPT every day, SaaS marketing teams use specialized tools (such as **HubSpot’s AEO features**, **Metricus**, **Brand24**, and emerging LLM tracking software) to automate the process.[metricusapp.com](https://metricusapp.com/blog/b2b-saas-invisible-chatgpt/#:~:text=AI%20visibility%20for%20B2B%20SaaS%20is%20the,article.%20The%20B2B%20buyer%20shift%20to%20AI%3B) These platforms:",
       "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d"
      }
     ],

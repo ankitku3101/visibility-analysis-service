@@ -2,7 +2,7 @@
 in a PATCH) are rejected with 422 instead of being silently ignored."""
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator
 
 Title = Annotated[str, StringConstraints(max_length=200)]
 Text = Annotated[str, StringConstraints(max_length=4000)]
@@ -57,6 +57,14 @@ class PatchBody(Strict):
     diagnostics: list[Diagnostic] | None = Field(default=None, max_length=10)
     remedies: list[Remedy] | None = Field(default=None, max_length=10)
     notes: Text | None = None
+
+    @field_validator("diagnostics", "remedies", "notes")
+    @classmethod
+    def not_null(cls, value):
+        # None only means "not sent". An explicit null would reach the content model and fail there as a 500.
+        if value is None:
+            raise ValueError("cannot be null; leave the field out to keep it unchanged")
+        return value
 
 
 class DecisionBody(Strict):

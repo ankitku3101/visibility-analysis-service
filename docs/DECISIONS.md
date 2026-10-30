@@ -73,8 +73,12 @@ easy to detect), but `recommended` and `negative` rates have real error bars.
 - Not built (future work):
   - **review expiry**, e.g. an approval older than 30 days, or older than the analysis it uses, must be
     re-approved before export;
-  - **concurrency**: two reviewers deciding at once. SQLite serialises writes and a second decision on the
-    same version gets 409, but this was not tested under parallel load.
+  - **concurrency beyond one process**. Already handled: each state change takes the SQLite write lock
+    first, so of 4 parallel decisions on one version exactly one wins and the rest get 409 (tested). Not
+    handled:
+    - two analysts editing the same draft (the last write wins; a version check on PATCH would fix it);
+    - several server processes (`interrupted` marking assumes one);
+    - named people instead of two shared tokens.
 - Eval replay: the final split replays exactly. The tuning split differs on c02, because the final run
   re-ran c02 and its newer recording replaced the old one.
 
@@ -97,7 +101,7 @@ I used an AI coding assistant (Claude Code) throughout:
   - reviewing each phase before committing.
 
 Every claim in the report is checked by code, not by trust:
-- 145 tests;
+- 148 tests;
 - evidence quotes checked against the answers;
 - the eval against hand labels;
 - replay reproducing the local run exactly.

@@ -9,6 +9,12 @@ through analyst/reviewer review before export.
 - Final output: [out/analysis.json](out/analysis.json) (approved report: scores, coverage, 3 diagnostics,
   3 remedies, active time). Evaluation: [eval/results/report.md](eval/results/report.md).
 
+> **Why Python?** My strongest experience is in TypeScript (Node, Next.js, React), not Python. I still chose
+> Python + FastAPI for this project. The brief prefers Python, the scope is small, and as an assignment it was
+> a good chance to learn a new stack by building something real. FastAPI felt close to what I know: Pydantic
+> models play the role of Zod schemas, and dependencies (`Depends`) work like middleware. Plain SQL with
+> SQLite kept the data layer simple enough to understand fully. I'm happy to walk through any part of the code.
+
 ## 1. Prerequisites
 
 - Python 3.10+ (built and tested on 3.12, Windows 11).
@@ -99,7 +105,7 @@ Invoke-RestMethod -Method Post "$B/reports/1/decision" -Headers $R -ContentType 
 ## 5. Tests, evaluation, pack check
 
 ```bash
-pytest -q                      # 145 tests, no model needed; 3 that read the real pack skip if data/ is absent
+pytest -q                      # 148 tests, no model needed; 3 that read the real pack skip if data/ is absent
 python -m eval.run_eval        # LLM vs keyword baseline on the hand-labelled final split
 python -m eval.run_eval --split tuning
 py -3 tools/check_pack.py      # from the pack folder: inputs unchanged

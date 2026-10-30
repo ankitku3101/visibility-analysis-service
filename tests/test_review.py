@@ -163,7 +163,8 @@ def test_evidence_from_a_response_outside_the_analysis_is_rejected(client):
     assert res.json()["error"]["details"][0]["code"] == "unknown_response"
 
 
-@pytest.mark.parametrize("body", [{"scores": {}}, {"notes": "x", "actor": "reviewer"}, {}])
+@pytest.mark.parametrize("body", [{"scores": {}}, {"notes": "x", "actor": "reviewer"}, {},
+                                  {"notes": None}, {"diagnostics": None}, {"remedies": None}])
 def test_bad_patch_bodies(client, report, body):
     assert client.patch(f"/reports/{report['report_id']}", json=body, headers=ANALYST).status_code == 422
 

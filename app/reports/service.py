@@ -8,6 +8,8 @@ into a new draft (version + 1), which needs its own review. Content of a non-dra
 import json
 import sqlite3
 
+from pydantic import ValidationError
+
 from app.db import content_hash, now, to_json
 from app.errors import AppError
 from app.reports.draft import build_draft
@@ -93,7 +95,11 @@ def patch_report(conn: sqlite3.Connection, report_id: int, body: PatchBody, acto
     with conn:
         conn.execute("BEGIN IMMEDIATE")
         latest = _version(conn, report_id)
-        content = ReportContent.model_validate(json.loads(latest["content"]) | changes)
+        try:
+            content = ReportContent.model_validate(json.loads(latest["content"]) | changes)
+        except ValidationError as e:  # e.g. {"notes": null}: the request is wrong, not the server
+            details = [{"loc": list(err["loc"]), "msg": err["msg"]} for err in e.errors()]
+            raise AppError(422, "validation_error", "The edited report is not valid.", details) from None
         validate_content(conn, report["analysis_id"], content, complete=False)
         data = content.model_dump()
         if latest["status"] == "draft":

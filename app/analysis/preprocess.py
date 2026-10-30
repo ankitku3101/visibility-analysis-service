@@ -67,19 +67,27 @@ def named_in_prose(name: str, prose: str) -> bool:
     n, p = normalise(name), normalise(prose)
     if not n:
         return False
-    if n in p:
+    if f" {n} " in f" {p} ":  # whole words only: 'C++' → 'c' must not match inside 'cat'
         return True
     first = n.split()[0]
     return len(first) >= 4 and re.search(rf"\b{re.escape(first)}", p) is not None
 
 
-WORD = re.compile(r"\w+")
+# Words (letters/digits; "_" is markdown, not a word character here) plus sentence ends as a "." token.
+# Line breaks are not sentence ends: the model joins list items into one line when it quotes them.
+TOKEN = re.compile(r"[^\W_]+|[.!?](?=\s|$)")
 
 
 def normalise(text: str) -> str:
     """Words only, lowercase: punctuation, markdown and spacing never decide whether a quote matches.
-    The full run showed why: 'Gemini , which' vs 'Gemini, which' and \"'Kasparro,'\" vs \"'Kasparro',\" (F5)."""
-    return " ".join(WORD.findall(text.translate(PLAIN).lower()))
+    The full run showed why: 'Gemini , which' vs 'Gemini, which' and \"'Kasparro,'\" vs \"'Kasparro',\" (F5).
+    Sentence ends stay as "." so a quote cannot be stitched together across two sentences."""
+    tokens = ["." if t in "!?" else t for t in TOKEN.findall(text.translate(PLAIN).lower())]
+    out = []
+    for t in tokens:
+        if t != "." or (out and out[-1] != "."):  # collapse repeated ends ("?!" → ".")
+            out.append(t)
+    return " ".join(out).strip(" .")
 
 
 def quote_in_text(quote: str | None, text: str) -> bool:

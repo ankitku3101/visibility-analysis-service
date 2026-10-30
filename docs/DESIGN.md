@@ -98,11 +98,11 @@ competitors: [str], ranked_list: [str]|null   (only if the answer has an explici
 
 **Validation (code):** JSON must parse and match the model. Output over 8,000 chars → invalid.
 Each `true` label needs a quote found in `answer_text` that is not an instruction to the classifier (injection guard),
-compared as words only: same words, same order; case, punctuation and markdown ignored. If not mentioned, `recommended`
+compared as words only: same words, same order, inside the same sentence(s); case, punctuation, markdown ignored. If not mentioned, `recommended`
 and `negative` are forced false. Position = index of Kasparro in `ranked_list`, else `null`. Competitors: alias map, and
 the name must appear in the answer prose (not only in a cited link).
 
-**Retries:** up to `LLM_MAX_RETRIES` (3 attempts total). Timeout/connection error → same request. Bad JSON, schema
+**Retries:** up to `LLM_MAX_RETRIES` (3 attempts total). Timeout/connection error → same messages. Bad JSON, schema
 error or quote not found → the next attempt adds the previous output and what was wrong. Retries use temperature 0.3 with a fixed
 seed, because at temperature 0 a retry repeats itself (incl. Ollama repetition loops). Provider error text is stored in `llm_calls`. Then `failed` with the last error code (`timeout`, `malformed_output`,
 `empty_output`, `evidence_not_found`, `call_limit_reached`). One failed response never stops the run.

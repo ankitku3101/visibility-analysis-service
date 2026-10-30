@@ -90,8 +90,8 @@ MAX_ECHO_CHARS = 2000  # how much of a bad reply is shown back to the model
 def call_with_retries(client: LLMClient, key: str, messages: list[dict], settings: Settings, budget: Budget,
                       validate: Callable[[ClassifyOutput], None] | None = None,
                       log: LogFn | None = None) -> Outcome:
-    """Bounded retries. Transport errors retry the same request. Content errors retry with the previous
-    reply and a short correction, because at temperature 0 the same request gives the same reply."""
+    """Bounded retries. Transport errors retry the same messages. Content errors retry with the previous
+    reply and a short correction, so the model knows what to fix (a plain retry tends to repeat the mistake)."""
     max_attempts = settings.llm_max_retries + 1
     last_error = None
     attempt = 0
@@ -115,7 +115,7 @@ def call_with_retries(client: LLMClient, key: str, messages: list[dict], setting
             detail = str(e) if str(e) != e.code else None
         except EvidenceError as e:
             error, label = "evidence_not_found", str(e)
-            detail = f"{label}_quote not valid evidence"
+            detail = f"{label}_quote not valid evidence: {getattr(data, f'{label}_quote', None)!r}"[:300]
         latency_ms = int((time.perf_counter() - started) * 1000)
         if log:
             log(attempt=attempt, status="ok" if error is None else "error", latency_ms=latency_ms, error_code=error,

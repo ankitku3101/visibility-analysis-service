@@ -8,5 +8,6 @@
  "retry_options": {
   "temperature": 0.3
  },
+ "retry_seed": "attempt number (2, 3)",
  "prompt_version": "classify-v3"
 }

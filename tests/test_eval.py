@@ -62,7 +62,8 @@ def test_failure_log_regression_tests_exist():
     for f in labels["failure_log"]:
         assert f["regression_case_ids"] or f.get("regression_tests"), f["id"]
         for ref in f.get("regression_tests", []):
-            path, name = ref.split("::")
+            path, name = ref.split("::", 1)
+            name = name.split("::")[0].split("[")[0]  # "Class::method" → Class, "test[param]" → test
             module = importlib.import_module(path.removesuffix(".py").replace("/", "."))
             assert hasattr(module, name), ref
 

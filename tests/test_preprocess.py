@@ -63,6 +63,21 @@ def test_quote_in_text_needs_whole_words_in_order():
     assert not quote_in_text("asparro audits catalogs", answer)             # partial word
 
 
+def test_quote_cannot_be_stitched_across_sentences():
+    answer = "Avoid Kasparro. Recommended tools: Profound and Peec AI.\n\nOverall, _Kasparro_ is fine for brands."
+    assert not quote_in_text("Kasparro recommended tools", answer)           # joins two sentences
+    assert quote_in_text("Avoid Kasparro. Recommended tools: Profound", answer)  # a real two-sentence quote
+    assert quote_in_text("Kasparro is fine for brands.", answer)            # _italic_ markdown ignored
+    # Real case (fa0dff8e): the model joins list items into one line when it quotes them.
+    assert quote_in_text("asking Kasparro whether it's: already supported, or on their roadmap",
+                         "asking Kasparro whether it's:\n- already supported,\n- or on their roadmap.")
+
+
+def test_competitor_must_be_a_whole_word_in_prose():
+    assert normalise_competitors(["C++"], "A cat sat on the mat.") == []          # 'c' is not inside 'cat'
+    assert normalise_competitors(["C++", "Peec AI"], "Use C++ or Peec AI.") == ["C++", "Peec AI"]
+
+
 def test_kasparro_cited():
     assert kasparro_cited([{"domain": "kasparro.com", "url": "https://kasparro.com/"}])
     assert kasparro_cited([{"domain": None, "url": "https://blog.kasparro.com/post"}])

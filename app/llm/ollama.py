@@ -28,7 +28,7 @@ class OllamaClient:
         self.store = store
         if store:
             store.write_meta({"model": self.model, "options": OPTIONS, "retry_options": RETRY_OPTIONS,
-                              "prompt_version": PROMPT_VERSION})
+                              "retry_seed": "attempt number (2, 3)", "prompt_version": PROMPT_VERSION})
 
     def check(self) -> None:
         """Fail fast before a long run: Ollama must be reachable and the model pulled."""

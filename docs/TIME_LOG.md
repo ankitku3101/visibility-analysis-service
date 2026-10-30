@@ -22,13 +22,13 @@ Started: 30 Oct 2026, 12:00 PM.
 | 30 Oct | 15:47 | Full local run 1: 147/150 in 24 min. Diagnosed 3 failures → fixes F5 (quote punctuation) and F6 (retry loop, error text). 145 tests pass. |
 | 30 Oct | 17:40 | Full local run 2 (final code): 150/150 in 23 min, F6 retry recovered 2 answers. Replay reproduces it exactly. Eval re-run locally. |
 | 30 Oct | 18:00 | Phase 08 done: report from evidence, reject → edit → approve → export demo, `out/analysis.json`, README, DECISIONS. Fresh clone + README in replay: setup to export in under 2 min. |
-
 | 30 Oct | 18:10 | Break excluded from the time count. `out/analysis.json` re-exported as v3: same content, notes corrected to the real active time, re-approved. |
+| 30 Oct | 18:25 | Final review (incl. /code-review): quotes can no longer be stitched across sentences, 500 on bad PATCH fixed, smaller fixes. Replay still 150/150, identical. README + DECISIONS simplified. 150 tests pass. |
 
 **Break:** 15:48–17:08 (about 1 h 20 min, no work). This is the longest gap between commits (15:48 → 17:48). Run 2's
 import started at 17:08:58, which marks the end of the break.
 
-**Total active time: about 4 h 50 min.** That is the wall clock from 12:00 to 18:10 (6 h 10 min) minus the
+**Total active time: about 5 h 05 min.** That is the wall clock from 12:00 to 18:25 (6 h 25 min) minus the
 1 h 20 min break. It includes about 50 min of waiting on the two full local model runs and the local eval runs.
 
 **Unfinished / known gaps**

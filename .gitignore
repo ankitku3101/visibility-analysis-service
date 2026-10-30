@@ -1,0 +1,31 @@
+# Supplied assignment pack (hiring team's data, keep out of Git)
+data/
+provenance/
+reference/
+schemas/
+fixtures/
+tools/
+Assignment.pdf
+Assignment.docx
+START_HERE.txt
+PACK_MANIFEST.json
+
+# Secrets
+.env
+
+# Database
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
